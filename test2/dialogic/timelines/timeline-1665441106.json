@@ -1,0 +1,99 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://music/bgm bgm_game_puzzle__aigei_com.ogg",
+			"volume": -25
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "St. Margaret of Antioch Church: A Grade 2 (starred) English Heritage listed historic building dating back to Saxon times, this church is recorded in the Domesday Book and is a rare example of a working 'moorland' church."
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221868.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221868.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Does the church have any interesting historical stories?"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Several times during it's history the church has fallen into neglect, it was almost entirely rebuilt in the sixteenth century.\nAnd the church has a legend of being haunted. Locals have reported hearing the organ playing inside when no one is around. The lights of passing cars flash.\nThese stories add to the mystery of the church."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1665441106.json",
+		"name": "timeline-StMargetChurch"
+	}
+}

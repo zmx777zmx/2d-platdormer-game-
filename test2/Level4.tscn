@@ -1,0 +1,1480 @@
+[gd_scene load_steps=126 format=2]
+
+[ext_resource path="res://cloud.gd" type="Script" id=1]
+[ext_resource path="res://images/cloud.png" type="Texture" id=2]
+[ext_resource path="res://images/cloud1.png" type="Texture" id=3]
+[ext_resource path="res://images/level4 bg.jpg" type="Texture" id=4]
+[ext_resource path="res://HUD.gd" type="Script" id=5]
+[ext_resource path="res://music/游戏气泡.ogg" type="AudioStream" id=6]
+[ext_resource path="res://player-timer.gd" type="Script" id=7]
+[ext_resource path="res://NPC- St Marget Primary School.gd" type="Script" id=8]
+[ext_resource path="res://player.gd" type="Script" id=9]
+[ext_resource path="res://introLevel2.gd" type="Script" id=10]
+[ext_resource path="res://NPC- cottage.gd" type="Script" id=11]
+[ext_resource path="res://timer.gd" type="Script" id=12]
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=13]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=14]
+[ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=15]
+[ext_resource path="res://addons/rmsmartshape/shapes/point_array.gd" type="Script" id=16]
+[ext_resource path="res://addons/rmsmartshape/shapes/point.gd" type="Script" id=17]
+[ext_resource path="res://addons/rmsmartshape/vertex_properties.gd" type="Script" id=18]
+[ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=19]
+[ext_resource path="res://images/life.png" type="Texture" id=20]
+[ext_resource path="res://images/level4 intro.png" type="Texture" id=21]
+[ext_resource path="res://enermy.tscn" type="PackedScene" id=22]
+[ext_resource path="res://images/timer.png" type="Texture" id=23]
+[ext_resource path="res://images/life-lost.png" type="Texture" id=24]
+[ext_resource path="res://images/primary school shelter.png" type="Texture" id=25]
+[ext_resource path="res://images/player/player idle.png" type="Texture" id=26]
+[ext_resource path="res://images/player/npc l3.png" type="Texture" id=27]
+[ext_resource path="res://images/player/npc l4.png" type="Texture" id=28]
+[ext_resource path="res://images/player/npc r3.png" type="Texture" id=29]
+[ext_resource path="res://music/jump.ogg" type="AudioStream" id=30]
+[ext_resource path="res://images/player/npc l5.png" type="Texture" id=31]
+[ext_resource path="res://images/player/npc r2.png" type="Texture" id=32]
+[ext_resource path="res://images/player/npc r5.png" type="Texture" id=33]
+[ext_resource path="res://images/coin1.png" type="Texture" id=34]
+[ext_resource path="res://images/player/npc l2.png" type="Texture" id=35]
+[ext_resource path="res://images/player/npc l1.png" type="Texture" id=36]
+[ext_resource path="res://images/player/play jump 1.png" type="Texture" id=37]
+[ext_resource path="res://images/dust.png" type="Texture" id=38]
+[ext_resource path="res://images/npc.png" type="Texture" id=39]
+[ext_resource path="res://images/player/play jump 2.png" type="Texture" id=40]
+[ext_resource path="res://images/player/play jump 3.png" type="Texture" id=41]
+[ext_resource path="res://images/chat icon.png" type="Texture" id=42]
+[ext_resource path="res://images/player/npc r4.png" type="Texture" id=43]
+[ext_resource path="res://images/player/npc r1.png" type="Texture" id=44]
+[ext_resource path="res://images/story intro cover.png" type="Texture" id=45]
+[ext_resource path="res://images/vege 1.png" type="Texture" id=46]
+[ext_resource path="res://images/vege 2.png" type="Texture" id=47]
+[ext_resource path="res://Area2D.gd" type="Script" id=48]
+[ext_resource path="res://Level4.gd" type="Script" id=49]
+[ext_resource path="res://images/primary school story.png" type="Texture" id=50]
+[ext_resource path="res://images/tg2.png" type="Texture" id=51]
+[ext_resource path="res://images/ladder.png" type="Texture" id=52]
+[ext_resource path="res://images/St Margaret church story.png" type="Texture" id=53]
+[ext_resource path="res://NPC-question3.gd" type="Script" id=54]
+[ext_resource path="res://images/npc-asking.png" type="Texture" id=55]
+[ext_resource path="res://images/chat1.png" type="Texture" id=56]
+[ext_resource path="res://images/游戏背景level5.jpg" type="Texture" id=57]
+[ext_resource path="res://images/road guid.png" type="Texture" id=58]
+[ext_resource path="res://images/level4 ramp.png" type="Texture" id=59]
+[ext_resource path="res://images/light test.png" type="Texture" id=60]
+[ext_resource path="res://movingplatform.gd" type="Script" id=61]
+[ext_resource path="res://test setting.tscn" type="PackedScene" id=62]
+[ext_resource path="res://images/l4 road.png" type="Texture" id=63]
+
+[sub_resource type="OccluderPolygon2D" id=1357]
+polygon = PoolVector2Array( 136, 464, 184, 464, 184, 472, 136, 472 )
+
+[sub_resource type="OccluderPolygon2D" id=1361]
+polygon = PoolVector2Array( 0, 0, 46.5731, 0, 46.5731, 7.57935, 0, 7.57935 )
+
+[sub_resource type="RectangleShape2D" id=1358]
+extents = Vector2( 30.5, 2.25 )
+
+[sub_resource type="RectangleShape2D" id=1363]
+extents = Vector2( 157, 3 )
+
+[sub_resource type="RectangleShape2D" id=1309]
+extents = Vector2( 37, 5 )
+
+[sub_resource type="RectangleShape2D" id=1333]
+extents = Vector2( 32, 5 )
+
+[sub_resource type="RectangleShape2D" id=1359]
+extents = Vector2( 32, 6.5 )
+
+[sub_resource type="RectangleShape2D" id=1161]
+extents = Vector2( 150.25, 5 )
+
+[sub_resource type="RectangleShape2D" id=1360]
+extents = Vector2( 32, 10 )
+
+[sub_resource type="Animation" id=1366]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("movingplatform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 392, 416 ) ]
+}
+
+[sub_resource type="Animation" id=1365]
+resource_name = "moving platformer"
+length = 4.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("movingplatform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.3, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 400, 400 ), Vector2( 385.6, 428.8 ), Vector2( 376, 448 ), Vector2( 352, 464 ), Vector2( 312, 472 ), Vector2( 282, 464 ), Vector2( 264, 448 ), Vector2( 245, 424 ), Vector2( 242.5, 412 ), Vector2( 240, 400 ), Vector2( 240, 388 ), Vector2( 240, 376 ), Vector2( 259, 337 ), Vector2( 272, 328 ), Vector2( 296, 314 ), Vector2( 320, 312 ), Vector2( 350.333, 316.667 ), Vector2( 372.167, 330.333 ), Vector2( 384, 344 ), Vector2( 398.333, 362.667 ), Vector2( 401.167, 381.333 ), Vector2( 400, 400 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=1364]
+extents = Vector2( 45.8305, 10 )
+
+[sub_resource type="StyleBoxFlat" id=1073]
+bg_color = Color( 0.45098, 0.0745098, 0.0745098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1074]
+bg_color = Color( 0.384314, 0.0196078, 0.0666667, 0.415686 )
+
+[sub_resource type="StyleBoxFlat" id=1075]
+bg_color = Color( 0.337255, 0.0156863, 0.0156863, 1 )
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_detail = 5
+shadow_color = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1083]
+bg_color = Color( 0.905882, 0.905882, 0.905882, 0.854902 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.545098, 0.270588, 0.270588, 1 )
+border_blend = true
+
+[sub_resource type="CircleShape2D" id=1082]
+radius = 48.6621
+
+[sub_resource type="Shader" id=525]
+code = "shader_type canvas_item;
+
+uniform vec3 color = vec3(0.33, 0.5, 0.95);
+uniform int OCTAVES = 4;
+
+float rand(vec2 coord){
+	return fract(sin(dot(coord, vec2(56,78))* 1000.0)* 1000.0);
+}
+
+float noise(vec2 coord){
+	vec2 i = floor(coord);
+	vec2 f = fract(coord);
+	
+	float a = rand(i);
+	float b = rand(i + vec2(1.0, 0.0));
+	float c = rand(i + vec2(0.0, 1.0));
+	float d = rand(i + vec2(1.0, 1.0));
+	
+	vec2 cubic = f * f * (3.0 - 2.0 * f);
+	
+	return mix(a, b, f.x) + (c - a) * f.y * (1.0 - f.x) + (d - b) * f.x * f.y;
+}
+
+float fbm(vec2 coord){
+	float value = 0.0;
+	float scale = 0.5;
+	
+	for(int i = 0; i < OCTAVES; i++){
+		value += noise(coord) * scale;
+		coord *= 2.0;
+		scale *= 0.5;
+	}
+	return value;
+}
+
+void fragment(){
+	vec2 coord = UV * 20.0;
+	
+	vec2 motion = vec2(fbm(coord + vec2( TIME * -0.5, TIME * 0.5)));
+	
+	float final = fbm(coord + motion);
+	
+	COLOR = vec4(color, final * 0.5);
+}
+
+"
+
+[sub_resource type="ShaderMaterial" id=1108]
+shader = SubResource( 525 )
+shader_param/color = Vector3( 0.33, 0.5, 0.95 )
+shader_param/OCTAVES = 4
+
+[sub_resource type="CircleShape2D" id=1236]
+radius = 48.6621
+
+[sub_resource type="SpriteFrames" id=1076]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 43 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "walk-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 35 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "walk-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1077]
+radius = 24.75
+height = 94.5002
+
+[sub_resource type="Gradient" id=1078]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.380392 )
+
+[sub_resource type="GradientTexture" id=1071]
+gradient = SubResource( 1078 )
+
+[sub_resource type="Curve" id=1079]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.61036 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=1072]
+curve = SubResource( 1079 )
+
+[sub_resource type="ParticlesMaterial" id=1080]
+flag_disable_z = true
+spread = 40.43
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 20.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 514.8
+scale = 2.0
+scale_curve = SubResource( 1072 )
+color_ramp = SubResource( 1071 )
+
+[sub_resource type="ParticlesMaterial" id=1081]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="SpriteFrames" id=1136]
+animations = [ {
+"frames": [ ExtResource( 47 ), ExtResource( 46 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=1137]
+radius = 72.4431
+
+[sub_resource type="Resource" id=1391]
+script = ExtResource( 18 )
+texture_idx = 3
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1392]
+script = ExtResource( 17 )
+position = Vector2( -347.313, 271.091 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1391 )
+
+[sub_resource type="Resource" id=1393]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1394]
+script = ExtResource( 17 )
+position = Vector2( 1847.68, 708.161 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1393 )
+
+[sub_resource type="Resource" id=1395]
+script = ExtResource( 18 )
+texture_idx = 3
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1396]
+script = ExtResource( 17 )
+position = Vector2( -347.313, 271.091 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1395 )
+
+[sub_resource type="Resource" id=1397]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1398]
+script = ExtResource( 17 )
+position = Vector2( -352.008, 762.352 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1397 )
+
+[sub_resource type="Resource" id=1399]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1400]
+script = ExtResource( 17 )
+position = Vector2( -253.507, 273.977 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1399 )
+
+[sub_resource type="Resource" id=1401]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1402]
+script = ExtResource( 17 )
+position = Vector2( 1851.66, 434.205 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1401 )
+
+[sub_resource type="Resource" id=1403]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1404]
+script = ExtResource( 17 )
+position = Vector2( 1664.23, 437.742 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1403 )
+
+[sub_resource type="Resource" id=1405]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1406]
+script = ExtResource( 17 )
+position = Vector2( 1230.26, 474.196 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1405 )
+
+[sub_resource type="Resource" id=1407]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1408]
+script = ExtResource( 17 )
+position = Vector2( 969.979, 499.211 )
+point_in = Vector2( -105.036, 24.5084 )
+point_out = Vector2( 105.036, -24.5084 )
+properties = SubResource( 1407 )
+
+[sub_resource type="Resource" id=1409]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1410]
+script = ExtResource( 17 )
+position = Vector2( 466.548, 493.269 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1409 )
+
+[sub_resource type="Resource" id=1411]
+script = ExtResource( 18 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1412]
+script = ExtResource( 17 )
+position = Vector2( -137.681, 479.99 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1411 )
+
+[sub_resource type="Resource" id=1413]
+script = ExtResource( 16 )
+_points = {
+0: SubResource( 1392 ),
+2: SubResource( 1394 ),
+3: SubResource( 1396 ),
+4: SubResource( 1398 ),
+5: SubResource( 1400 ),
+7: SubResource( 1402 ),
+8: SubResource( 1404 ),
+9: SubResource( 1406 ),
+10: SubResource( 1408 ),
+15: SubResource( 1410 ),
+16: SubResource( 1412 )
+}
+_point_order = [ 0, 5, 16, 15, 10, 9, 8, 7, 2, 4, 3 ]
+_constraints = {
+[ 0, 3 ]: 15
+}
+_next_key = 17
+
+[sub_resource type="Resource" id=1107]
+script = ExtResource( 15 )
+_edge_meta_materials = [  ]
+fill_textures = [  ]
+fill_texture_normals = [  ]
+fill_texture_z_index = -10
+fill_mesh_offset = 0.0
+render_offset = 0.0
+
+[sub_resource type="SegmentShape2D" id=1186]
+a = Vector2( 2056, 16 )
+
+[sub_resource type="RectangleShape2D" id=1211]
+extents = Vector2( 80, 4 )
+
+[sub_resource type="RectangleShape2D" id=1162]
+extents = Vector2( 5.25, 97 )
+
+[sub_resource type="RectangleShape2D" id=1187]
+extents = Vector2( 4, 414.5 )
+
+[sub_resource type="RectangleShape2D" id=1362]
+extents = Vector2( 157, 5 )
+
+[sub_resource type="RectangleShape2D" id=1260]
+extents = Vector2( 52.5, 36 )
+
+[sub_resource type="StyleBoxFlat" id=1261]
+bg_color = Color( 0.337255, 0.0156863, 0.0156863, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=1390]
+bg_color = Color( 0.984314, 0.984314, 0.984314, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[node name="Level4" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 49 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1536, 106 )
+scale = Vector2( 0.536137, 0.352119 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 939.714, 228.232 )
+scale = Vector2( 0.390182, 0.465982 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1016, 336 )
+scale = Vector2( 0.365121, 0.365592 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2344, 408 )
+scale = Vector2( 0.645053, 0.7141 )
+texture = ExtResource( 57 )
+
+[node name="cloud" type="ParallaxLayer" parent="ParallaxBackground"]
+script = ExtResource( 1 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( 872, 304 )
+scale = Vector2( 1.41607, 1.69912 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( 296, 240 )
+scale = Vector2( 1.33703, 1.33703 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( 1800, 328 )
+scale = Vector2( 0.34321, 0.387763 )
+texture = ExtResource( 3 )
+
+[node name="ladder" type="Sprite" parent="."]
+visible = false
+position = Vector2( 328, 488 )
+scale = Vector2( 0.0854186, 0.0952704 )
+texture = ExtResource( 52 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 664, 664 )
+texture = ExtResource( 63 )
+
+[node name="platformer1" type="Node2D" parent="."]
+position = Vector2( 0, 8 )
+
+[node name="Shadow1" type="Node2D" parent="platformer1"]
+position = Vector2( 8, 16 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="platformer1/Shadow1"]
+position = Vector2( 184, 64 )
+occluder = SubResource( 1357 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="platformer1/Shadow1"]
+position = Vector2( 280, 8 )
+occluder = SubResource( 1357 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="platformer1/Shadow1"]
+position = Vector2( 504, 328 )
+scale = Vector2( 6.69915, 1.0555 )
+occluder = SubResource( 1361 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer1"]
+position = Vector2( -40, 0 )
+
+[node name="p1" type="CollisionShape2D" parent="platformer1/StaticBody2D"]
+position = Vector2( 392, 549.75 )
+shape = SubResource( 1358 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="platformer1"]
+position = Vector2( 64, -56 )
+
+[node name="p2" type="CollisionShape2D" parent="platformer1/StaticBody2D2"]
+position = Vector2( 392, 552 )
+shape = SubResource( 1358 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="platformer1"]
+
+[node name="p4" type="CollisionShape2D" parent="platformer1/StaticBody2D4"]
+position = Vector2( 667, 347 )
+shape = SubResource( 1363 )
+
+[node name="Light1" type="Light2D" parent="platformer1"]
+position = Vector2( 336, 560 )
+rotation = -0.0293152
+scale = Vector2( 0.12129, 0.0790668 )
+texture = ExtResource( 60 )
+color = Color( 0.321569, 0.937255, 1, 1 )
+range_height = -1028.1
+shadow_enabled = true
+shadow_color = Color( 0.113725, 0.933333, 0.376471, 0 )
+
+[node name="Light2" type="Light2D" parent="platformer1"]
+visible = false
+position = Vector2( 448, 504 )
+rotation = -0.0293152
+scale = Vector2( 0.12129, 0.0790668 )
+texture = ExtResource( 60 )
+color = Color( 0.278431, 0.933333, 1, 1 )
+range_height = -1028.1
+shadow_enabled = true
+shadow_color = Color( 0.113725, 0.933333, 0.376471, 0 )
+shadow_filter = 4
+
+[node name="Light4" type="Light2D" parent="platformer1"]
+visible = false
+position = Vector2( 672, 376 )
+scale = Vector2( 0.326002, 0.108313 )
+texture = ExtResource( 60 )
+shadow_enabled = true
+shadow_color = Color( 0.254902, 1, 0.913725, 0 )
+
+[node name="Area2D" type="Area2D" parent="platformer1"]
+position = Vector2( 8, 0 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="platformer1/Area2D"]
+position = Vector2( 176, 520 )
+scale = Vector2( -0.818414, 4.51265 )
+shape = SubResource( 1309 )
+
+[node name="P1" type="Area2D" parent="platformer1"]
+position = Vector2( -32, 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformer1/P1"]
+position = Vector2( 384, 515 )
+shape = SubResource( 1333 )
+
+[node name="P2" type="Area2D" parent="platformer1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformer1/P2"]
+position = Vector2( 456, 486.5 )
+shape = SubResource( 1359 )
+
+[node name="P4" type="Area2D" parent="platformer1"]
+position = Vector2( -8, -24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformer1/P4"]
+position = Vector2( 670.25, 352 )
+shape = SubResource( 1161 )
+
+[node name="moving platform" type="Node2D" parent="platformer1"]
+visible = false
+light_mask = 513
+position = Vector2( 0, -8 )
+
+[node name="movingplatform" type="KinematicBody2D" parent="platformer1/moving platform"]
+position = Vector2( 392, 416 )
+scale = Vector2( 0.698225, 0.513514 )
+script = ExtResource( 61 )
+
+[node name="Light3" type="Light2D" parent="platformer1/moving platform/movingplatform"]
+position = Vector2( -0.00012207, 31.1577 )
+rotation = -0.0398502
+scale = Vector2( 0.173775, 0.153942 )
+texture = ExtResource( 60 )
+color = Color( 0.278431, 0.933333, 1, 1 )
+range_height = -1028.1
+shadow_enabled = true
+shadow_color = Color( 0.113725, 0.933333, 0.376471, 0 )
+shadow_filter = 4
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="platformer1/moving platform/movingplatform"]
+position = Vector2( -229.152, -919.157 )
+scale = Vector2( 1.43766, 1.95488 )
+occluder = SubResource( 1357 )
+
+[node name="P3" type="Area2D" parent="platformer1/moving platform/movingplatform"]
+position = Vector2( -561.424, -701.052 )
+scale = Vector2( 1.4322, 1.94737 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformer1/moving platform/movingplatform/P3"]
+position = Vector2( 392, 360 )
+shape = SubResource( 1360 )
+
+[node name="moving" type="AnimationPlayer" parent="platformer1/moving platform/movingplatform"]
+root_node = NodePath("../..")
+autoplay = "moving platformer"
+anims/RESET = SubResource( 1366 )
+"anims/moving platformer" = SubResource( 1365 )
+
+[node name="Sprite" type="Sprite" parent="platformer1/moving platform/movingplatform"]
+scale = Vector2( 0.288448, 0.0650286 )
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformer1/moving platform/movingplatform"]
+position = Vector2( -6.10352e-05, 0 )
+shape = SubResource( 1364 )
+
+[node name="introbg" type="Node2D" parent="platformer1"]
+visible = false
+
+[node name="intro2" type="Sprite" parent="platformer1/introbg"]
+position = Vector2( 584, 424 )
+scale = Vector2( 1.04736, 1.16307 )
+texture = ExtResource( 59 )
+
+[node name="Sprite2" type="Sprite" parent="platformer1/introbg"]
+position = Vector2( 370.129, 546.24 )
+scale = Vector2( 0.186696, 0.0362242 )
+texture = ExtResource( 45 )
+
+[node name="Sprite3" type="Sprite" parent="platformer1/introbg"]
+position = Vector2( 456, 496 )
+scale = Vector2( 0.186696, 0.0362242 )
+texture = ExtResource( 45 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 5 )
+
+[node name="Panel5" type="Panel" parent="HUD"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 8.0
+margin_top = 26.0
+margin_right = 31.0
+margin_bottom = 46.0
+rect_scale = Vector2( 2.91888, 1.00066 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel6" type="Panel" parent="HUD"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 80.0
+margin_right = 40.0
+margin_bottom = 98.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 54.0
+margin_top = 72.0
+margin_right = 84.0
+margin_bottom = 86.0
+rect_scale = Vector2( 9.03226, 4.05232 )
+custom_styles/panel = SubResource( 1074 )
+
+[node name="Label2" type="Label" parent="HUD"]
+margin_left = 56.0
+margin_top = 69.0
+margin_right = 85.0
+margin_bottom = 92.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 13 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "St Margaret’s C of E primary school"
+align = 1
+valign = 1
+
+[node name="Panel7" type="Panel" parent="HUD"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 107.0
+margin_right = 40.0
+margin_bottom = 125.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel8" type="Panel" parent="HUD"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 134.0
+margin_right = 40.0
+margin_bottom = 152.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel9" type="Panel" parent="HUD"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 162.0
+margin_right = 40.0
+margin_bottom = 180.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel10" type="Panel" parent="HUD"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 189.0
+margin_right = 40.0
+margin_bottom = 207.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel11" type="Panel" parent="HUD"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 216.0
+margin_right = 40.0
+margin_bottom = 234.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Label3" type="Label" parent="HUD"]
+margin_left = 56.0
+margin_top = 96.0
+margin_right = 85.0
+margin_bottom = 119.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 13 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Saddlers' Hall Farmhouse"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="HUD"]
+visible = false
+margin_left = 37.0
+margin_top = 124.0
+margin_right = 143.0
+margin_bottom = 147.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 13 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Don's Marsh"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="HUD"]
+visible = false
+margin_left = 56.0
+margin_top = 152.0
+margin_right = 85.0
+margin_bottom = 175.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 13 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "All Saint Church"
+align = 1
+valign = 1
+
+[node name="Label6" type="Label" parent="HUD"]
+visible = false
+margin_left = 24.0
+margin_top = 179.0
+margin_right = 130.0
+margin_bottom = 202.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 13 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Fish Pond"
+align = 1
+valign = 1
+
+[node name="Label7" type="Label" parent="HUD"]
+visible = false
+margin_left = 32.0
+margin_top = 207.0
+margin_right = 138.0
+margin_bottom = 230.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 13 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Harrows Bar"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 9.0
+margin_top = 28.0
+margin_right = 73.0
+margin_bottom = 51.0
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Level 1 - 6"
+
+[node name="timer" type="Control" parent="HUD"]
+margin_left = 125.0
+margin_top = 26.0
+margin_right = 165.0
+margin_bottom = 66.0
+theme = ExtResource( 13 )
+script = ExtResource( 12 )
+minutes = 2
+seconds = 30
+
+[node name="Timer2" type="Sprite" parent="HUD/timer"]
+position = Vector2( -28, 8 )
+scale = Vector2( 0.119668, 0.119668 )
+texture = ExtResource( 23 )
+
+[node name="Panel" type="Panel" parent="HUD/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 22.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel4" type="Panel" parent="HUD/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 22.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel2" type="Panel" parent="HUD/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 40.0
+margin_top = 3.0
+margin_right = 63.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Panel3" type="Panel" parent="HUD/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 84.0
+margin_top = 3.0
+margin_right = 107.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1073 )
+
+[node name="Timer" type="Timer" parent="HUD/timer"]
+autostart = true
+
+[node name="min" type="RichTextLabel" parent="HUD/timer"]
+margin_right = 19.0
+margin_bottom = 27.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "00"
+
+[node name="sec" type="RichTextLabel" parent="HUD/timer"]
+margin_left = 41.0
+margin_right = 59.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "00"
+
+[node name="dsec" type="RichTextLabel" parent="HUD/timer"]
+margin_left = 85.0
+margin_right = 105.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "00"
+
+[node name="colon" type="RichTextLabel" parent="HUD/timer"]
+margin_left = 28.0
+margin_top = -3.0
+margin_right = 68.0
+margin_bottom = 37.0
+rect_scale = Vector2( 1.2, 1.2 )
+theme = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = ":"
+
+[node name="colon1" type="RichTextLabel" parent="HUD/timer"]
+margin_left = 71.0
+margin_top = -3.0
+margin_right = 111.0
+margin_bottom = 37.0
+rect_scale = Vector2( 1.2, 1.2 )
+theme = ExtResource( 13 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = ":"
+
+[node name="collection" type="Control" parent="HUD"]
+margin_left = 944.0
+margin_top = 24.0
+margin_right = 984.0
+margin_bottom = 64.0
+theme = ExtResource( 13 )
+
+[node name="Panel" type="Panel" parent="HUD/collection"]
+margin_left = -5.0
+margin_top = 2.0
+margin_right = 35.0
+margin_bottom = 37.0
+rect_scale = Vector2( 3.01324, 1.13947 )
+custom_styles/panel = SubResource( 1075 )
+
+[node name="Panel2" type="Panel" parent="HUD/collection"]
+margin_left = -5.0
+margin_top = 50.0
+margin_right = 35.0
+margin_bottom = 71.0
+rect_scale = Vector2( 3.01324, 1.13947 )
+custom_styles/panel = SubResource( 1075 )
+
+[node name="Coins" type="Label" parent="HUD/collection"]
+margin_left = 69.0
+margin_top = 8.0
+margin_right = 109.0
+margin_bottom = 31.0
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "##"
+
+[node name="X" type="Label" parent="HUD/collection"]
+margin_left = 49.0
+margin_top = 8.0
+margin_right = 89.0
+margin_bottom = 31.0
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "X"
+
+[node name="hearts" type="TextureRect" parent="HUD/collection"]
+margin_left = 2.0
+margin_top = 53.0
+margin_right = 443.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.242, 0.214 )
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 2
+
+[node name="heartsEmpty" type="TextureRect" parent="HUD/collection"]
+margin_left = 2.0
+margin_top = 54.0
+margin_right = 436.0
+margin_bottom = 139.0
+rect_scale = Vector2( 0.245239, 0.199217 )
+texture = ExtResource( 24 )
+expand = true
+stretch_mode = 2
+
+[node name="Sprite" type="Sprite" parent="HUD/collection"]
+modulate = Color( 1, 1, 1, 0.635294 )
+position = Vector2( 16, 24 )
+scale = Vector2( 0.0474159, 0.0679504 )
+texture = ExtResource( 34 )
+
+[node name="introLevel4" type="Node2D" parent="HUD"]
+visible = false
+position = Vector2( -48, 24 )
+script = ExtResource( 10 )
+
+[node name="Panel" type="Panel" parent="HUD/introLevel4"]
+margin_left = 376.0
+margin_top = 320.0
+margin_right = 412.0
+margin_bottom = 345.0
+rect_scale = Vector2( 9.13392, 7.21716 )
+custom_styles/panel = SubResource( 1083 )
+
+[node name="Button" type="Button" parent="HUD/introLevel4/Panel"]
+margin_left = 31.5308
+margin_top = 2.21692
+margin_right = 51.5308
+margin_bottom = 22.2169
+rect_scale = Vector2( 0.147441, 0.161594 )
+custom_colors/font_color_focus = Color( 0.443137, 0.0156863, 0.0156863, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.294118, 0, 0, 1 )
+text = "X"
+flat = true
+
+[node name="Label" type="Label" parent="HUD/introLevel4/Panel"]
+margin_left = -38.5377
+margin_top = -32.1456
+margin_right = 1.4623
+margin_bottom = -18.1456
+
+[node name="Sprite" type="Sprite" parent="HUD/introLevel4/Panel"]
+position = Vector2( 17.517, 14.4101 )
+scale = Vector2( 0.0680766, 0.0861565 )
+texture = ExtResource( 21 )
+
+[node name="Label2" type="Label" parent="HUD/introLevel4/Panel"]
+margin_left = 29.7791
+margin_top = 19.9525
+margin_right = 69.7791
+margin_bottom = 42.9525
+rect_scale = Vector2( 0.114453, 0.114453 )
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "X1"
+
+[node name="coin" parent="HUD/introLevel4/Panel" instance=ExtResource( 14 )]
+position = Vector2( 27.1516, 21.0609 )
+scale = Vector2( 0.101683, 0.125314 )
+
+[node name="SETTING" parent="HUD" instance=ExtResource( 62 )]
+visible = false
+margin_top = 48.0
+margin_bottom = 48.0
+
+[node name="Button" type="Button" parent="HUD"]
+margin_left = 64.0
+margin_top = 424.0
+margin_right = 76.0
+margin_bottom = 444.0
+rect_scale = Vector2( 4.06994, 2.40962 )
+flat = true
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="NPC- St Marget Primary School" type="Area2D" parent="npc"]
+position = Vector2( 4064, 296 )
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 256
+script = ExtResource( 8 )
+
+[node name="npc" type="Sprite" parent="npc/NPC- St Marget Primary School"]
+position = Vector2( -4368.5, 400.168 )
+scale = Vector2( 0.443387, 0.443387 )
+texture = ExtResource( 39 )
+
+[node name="chat" type="Sprite" parent="npc/NPC- St Marget Primary School"]
+position = Vector2( -4328.5, 336.168 )
+scale = Vector2( 0.591244, 0.591244 )
+texture = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc/NPC- St Marget Primary School"]
+position = Vector2( -4370, 410 )
+shape = SubResource( 1082 )
+
+[node name="SoundNpc" type="AudioStreamPlayer" parent="npc/NPC- St Marget Primary School"]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="shelter" type="Sprite" parent="npc/NPC- St Marget Primary School"]
+visible = false
+position = Vector2( -4290, 360 )
+scale = Vector2( 0.823724, 0.823724 )
+texture = ExtResource( 25 )
+
+[node name="Fog" type="Sprite" parent="npc/NPC- St Marget Primary School"]
+visible = false
+material = SubResource( 1108 )
+position = Vector2( -4196.5, 70.6584 )
+rotation = 0.00240731
+scale = Vector2( 5.46575, 2.7614 )
+texture = ExtResource( 45 )
+
+[node name="NPC- Saddlers\' Hall Farmhouse" type="Area2D" parent="npc"]
+position = Vector2( 4568, 368 )
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 256
+script = ExtResource( 11 )
+
+[node name="npc" type="Sprite" parent="npc/NPC- Saddlers\' Hall Farmhouse"]
+position = Vector2( -4208, 328 )
+scale = Vector2( 0.414241, 0.414241 )
+texture = ExtResource( 39 )
+
+[node name="chat1" type="Sprite" parent="npc/NPC- Saddlers\' Hall Farmhouse"]
+modulate = Color( 0.564706, 0.564706, 0.564706, 1 )
+position = Vector2( -4180, 270 )
+scale = Vector2( 0.403736, 0.439913 )
+texture = ExtResource( 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc/NPC- Saddlers\' Hall Farmhouse"]
+position = Vector2( -4208, 328 )
+shape = SubResource( 1082 )
+
+[node name="SoundNpc" type="AudioStreamPlayer" parent="npc/NPC- Saddlers\' Hall Farmhouse"]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="NPC-question3" type="Area2D" parent="npc"]
+position = Vector2( 4640, 368 )
+scale = Vector2( 0.719514, 0.719514 )
+collision_layer = 256
+script = ExtResource( 54 )
+
+[node name="npc" type="Sprite" parent="npc/NPC-question3"]
+position = Vector2( -4208, 328 )
+scale = Vector2( 0.113028, 0.113028 )
+texture = ExtResource( 55 )
+
+[node name="chat1" type="Sprite" parent="npc/NPC-question3"]
+modulate = Color( 0.564706, 0.564706, 0.564706, 1 )
+position = Vector2( -4154.89, 251.037 )
+scale = Vector2( 0.137369, 0.149678 )
+texture = ExtResource( 56 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc/NPC-question3"]
+position = Vector2( -4208, 328 )
+shape = SubResource( 1236 )
+
+[node name="SoundNpc" type="AudioStreamPlayer" parent="npc/NPC-question3"]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="road guidence" type="Node2D" parent="."]
+position = Vector2( 880, 232 )
+
+[node name="road guidance" type="Sprite" parent="road guidence"]
+position = Vector2( 816, 328 )
+scale = Vector2( 0.316446, 0.316446 )
+texture = ExtResource( 58 )
+
+[node name="road guidance2" type="Sprite" parent="road guidence"]
+position = Vector2( -720, 328 )
+scale = Vector2( 0.316446, 0.316446 )
+texture = ExtResource( 58 )
+
+[node name="Label" type="Label" parent="road guidence"]
+margin_left = 794.0
+margin_top = 281.0
+margin_right = 837.0
+margin_bottom = 304.0
+rect_rotation = -1.07152
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Level 5"
+
+[node name="Label2" type="Label" parent="road guidence"]
+margin_left = -746.0
+margin_top = 282.0
+margin_right = -680.0
+margin_bottom = 305.0
+rect_rotation = -4.93135
+rect_scale = Vector2( 0.870702, 0.870702 )
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "start point"
+
+[node name="Label3" type="Label" parent="road guidence"]
+margin_left = -743.0
+margin_top = 309.0
+margin_right = -677.0
+margin_bottom = 332.0
+rect_rotation = 0.826771
+rect_scale = Vector2( 0.670566, 0.65876 )
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "LEVEL 4"
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( -328, -88 )
+scale = Vector2( 1.3, 1.3 )
+collision_mask = 127
+script = ExtResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 545, 398 )
+scale = Vector2( 0.801762, 0.801762 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+editor_draw_screen = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 458, 537 )
+scale = Vector2( 0.357527, 0.339894 )
+frames = SubResource( 1076 )
+animation = "walk-left"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 455, 537 )
+scale = Vector2( 0.444444, 0.444444 )
+shape = SubResource( 1077 )
+
+[node name="wallcheckerRight" type="RayCast2D" parent="player"]
+position = Vector2( 455, 530 )
+rotation = -1.5708
+scale = Vector2( 0.768604, 0.558594 )
+enabled = true
+
+[node name="wallcheckerLeft" type="RayCast2D" parent="player"]
+position = Vector2( 452, 530 )
+rotation = 1.5708
+scale = Vector2( 0.727253, 0.474859 )
+enabled = true
+
+[node name="player-timer" type="Timer" parent="player"]
+script = ExtResource( 7 )
+
+[node name="Particles2D" type="Particles2D" parent="player"]
+show_behind_parent = true
+position = Vector2( 456.384, 568.001 )
+rotation = -0.471239
+amount = 60
+local_coords = false
+process_material = SubResource( 1080 )
+texture = ExtResource( 38 )
+
+[node name="Timer" type="Timer" parent="player"]
+wait_time = 0.6
+one_shot = true
+
+[node name="jump" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource( 30 )
+volume_db = -35.0
+
+[node name="birds" type="Particles2D" parent="player"]
+position = Vector2( 1104.92, 608 )
+process_material = SubResource( 1081 )
+
+[node name="vege" type="Area2D" parent="."]
+script = ExtResource( 48 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="vege"]
+position = Vector2( 1104, 584 )
+scale = Vector2( 0.54933, 0.54933 )
+frames = SubResource( 1136 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vege"]
+position = Vector2( 1072, 616 )
+shape = SubResource( 1137 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 328, 176 )
+
+[node name="SS2D_Shape_Closed" type="Node2D" parent="StaticBody2D"]
+script = ExtResource( 19 )
+_points = SubResource( 1413 )
+material_overrides = {
+}
+shape_material = SubResource( 1107 )
+tessellation_stages = 5
+tessellation_tolerence = 4.0
+flip_edges = false
+render_edges = true
+collision_size = 32.0
+collision_offset = 0.0
+collision_polygon_node_path = NodePath("../CollisionPolygon2D")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+modulate = Color( 1, 1, 1, 0.3 )
+polygon = PoolVector2Array( -350.643, 267.624, -252.436, 272.209, -136.6, 478.188, 466.548, 493.267, 678.875, 505.428, 847.006, 508.616, 918.19, 505.985, 947.014, 503.172, 969.979, 499.211, 1054.96, 484.951, 1139.51, 477.508, 1230.26, 474.192, 1664.23, 437.734, 1855.1, 430.749, 1850.85, 711.304, -355.434, 765.83 )
+
+[node name="coin" type="Node2D" parent="."]
+
+[node name="coin" parent="coin" instance=ExtResource( 14 )]
+position = Vector2( 680, 280 )
+
+[node name="coin2" parent="coin" instance=ExtResource( 14 )]
+position = Vector2( 1328, 552 )
+
+[node name="base-h" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="base-h"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 688, 368 )
+scale = Vector2( 9.37931, 0.283784 )
+texture = ExtResource( 51 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="base-h"]
+position = Vector2( -24, 184 )
+shape = SubResource( 1186 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="base-h"]
+position = Vector2( 1592, 348 )
+shape = SubResource( 1211 )
+
+[node name="enermy" type="Node2D" parent="."]
+
+[node name="enermy" parent="enermy" instance=ExtResource( 22 )]
+position = Vector2( 568, 304 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="enermy2" parent="enermy" instance=ExtResource( 22 )]
+position = Vector2( 808, 312 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="base-v" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="base-v"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 520, 472 )
+scale = Vector2( 0.300458, 6.29166 )
+texture = ExtResource( 51 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base-v"]
+position = Vector2( 104, 288 )
+shape = SubResource( 1162 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="base-v"]
+position = Vector2( 136, 248 )
+shape = SubResource( 1187 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="base-v"]
+position = Vector2( 1872, 193.5 )
+shape = SubResource( 1187 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="base-v"]
+light_mask = 4096
+position = Vector2( 667, 355 )
+shape = SubResource( 1362 )
+
+[node name="story" type="Sprite" parent="."]
+visible = false
+position = Vector2( 704, 328 )
+scale = Vector2( 0.68627, 0.68627 )
+texture = ExtResource( 50 )
+
+[node name="SaddleStory" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1424, 408 )
+scale = Vector2( 0.788618, 0.788618 )
+texture = ExtResource( 53 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1520, 440 )
+scale = Vector2( 0.283266, 0.283266 )
+texture = ExtResource( 52 )
+
+[node name="passingLevel4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="passingLevel4"]
+position = Vector2( 1792, 568 )
+shape = SubResource( 1260 )
+
+[node name="Panel" type="Panel" parent="passingLevel4"]
+visible = false
+margin_left = 1776.0
+margin_top = 512.0
+margin_right = 1928.0
+margin_bottom = 552.0
+rect_scale = Vector2( 0.542821, 0.542821 )
+custom_styles/panel = SubResource( 1261 )
+
+[node name="Label" type="Label" parent="passingLevel4"]
+visible = false
+margin_left = 1784.0
+margin_top = 512.0
+margin_right = 1846.0
+margin_bottom = 535.0
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "Next Level"
+
+[node name="label" type="Node2D" parent="."]
+position = Vector2( -624, 72 )
+
+[node name="Panel" type="Panel" parent="label"]
+modulate = Color( 1, 1, 1, 0.501961 )
+margin_left = 777.0
+margin_top = 410.0
+margin_right = 921.0
+margin_bottom = 426.0
+custom_styles/panel = SubResource( 1390 )
+
+[node name="Label" type="Label" parent="label"]
+margin_left = 783.654
+margin_top = 408.0
+margin_right = 922.654
+margin_bottom = 431.0
+theme = ExtResource( 13 )
+custom_colors/font_color = Color( 0.388235, 0.0509804, 0.0509804, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "RELEASE THE STEPS !"
+
+[connection signal="body_entered" from="platformer1/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="platformer1/P1" to="." method="_on_P1_body_entered"]
+[connection signal="body_exited" from="platformer1/P1" to="." method="_on_P1_body_exited"]
+[connection signal="body_entered" from="platformer1/P2" to="." method="_on_P2_body_entered"]
+[connection signal="body_exited" from="platformer1/P2" to="." method="_on_P2_body_exited"]
+[connection signal="body_entered" from="platformer1/P4" to="." method="_on_P4_body_entered"]
+[connection signal="body_exited" from="platformer1/P4" to="." method="_on_P4_body_exited"]
+[connection signal="body_entered" from="platformer1/moving platform/movingplatform/P3" to="." method="_on_P3_body_entered"]
+[connection signal="body_exited" from="platformer1/moving platform/movingplatform/P3" to="." method="_on_P3_body_exited"]
+[connection signal="timeout" from="HUD/timer/Timer" to="HUD/timer" method="_on_Timer_timeout"]
+[connection signal="pressed" from="HUD/introLevel4/Panel/Button" to="HUD/introLevel4" method="_on_Button_pressed"]
+[connection signal="pressed" from="HUD/Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="player/player-timer" to="player" method="_on_playertimer_timeout"]
+[connection signal="timeout" from="player/Timer" to="player" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="coin/coin" to="." method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coin/coin2" to="." method="_on_coin2_body_entered"]
+[connection signal="body_entered" from="passingLevel4" to="player" method="_on_passingLevel4_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/鼠标点击.ogg-6242f53d2f10ed06a1feefef247bc657.oggstr"
+
+[deps]
+
+source_file="res://music/鼠标点击.ogg"
+dest_files=[ "res://.import/鼠标点击.ogg-6242f53d2f10ed06a1feefef247bc657.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

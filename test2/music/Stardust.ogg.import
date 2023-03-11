@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Stardust.ogg-d932d39fa76ca6f457490059b11c390e.oggstr"
+
+[deps]
+
+source_file="res://music/Stardust.ogg"
+dest_files=[ "res://.import/Stardust.ogg-d932d39fa76ca6f457490059b11c390e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,236 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://test setting.gd" type="Script" id=1]
+[ext_resource path="res://images/settings.png" type="Texture" id=2]
+[ext_resource path="res://images/arr.png" type="Texture" id=3]
+[ext_resource path="res://images/hidden.png" type="Texture" id=4]
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=5]
+[ext_resource path="res://images/envelope_letter_icon_900x600-01.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 0.870588 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.333333, 0.113725, 0.113725, 1 )
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 0.823529 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.854902, 0.862745, 0.87451, 1 )
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.94902, 0.94902, 0.94902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color( 0.384314, 0.0823529, 0.0823529, 1 )
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 1
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color( 0.384314, 0.0823529, 0.0823529, 1 )
+corner_detail = 10
+
+[node name="SETTING" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 984.0
+margin_top = 320.0
+margin_right = 1024.0
+margin_bottom = 360.0
+rect_scale = Vector2( 1.30468, 1.29985 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.913725, 0.113725, 0.113725, 1 )
+position = Vector2( 1010, 346 )
+scale = Vector2( 0.178229, 0.166705 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 984.0
+margin_top = 320.0
+margin_right = 1016.0
+margin_bottom = 352.0
+rect_scale = Vector2( 1.66596, 1.6635 )
+flat = true
+
+[node name="buts" type="Control" parent="Button"]
+visible = false
+
+[node name="Button" type="Button" parent="Button/buts"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 10, 10 )
+text = "sound"
+expand_icon = true
+
+[node name="Button2" type="Button" parent="Button/buts"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 10, 10 )
+flat = true
+
+[node name="Button3" type="Button" parent="Button/buts"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 10, 10 )
+flat = true
+
+[node name="Button4" type="Button" parent="Button/buts"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 10, 10 )
+text = "music"
+
+[node name="Button5" type="Button" parent="Button/buts"]
+pause_mode = 2
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 10, 10 )
+text = "stop"
+
+[node name="Button6" type="Button" parent="Button/buts"]
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 10, 10 )
+text = "resume"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Panel2" type="Panel" parent="."]
+visible = false
+margin_left = 3.0
+margin_top = 84.0
+margin_right = 43.0
+margin_bottom = 124.0
+rect_scale = Vector2( 1.00477, 0.990698 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="previousPage" type="Control" parent="."]
+margin_left = 64.0
+margin_top = 488.0
+margin_right = 104.0
+margin_bottom = 528.0
+rect_scale = Vector2( 1.1617, 1.1617 )
+
+[node name="Panel2" type="Panel" parent="previousPage"]
+visible = false
+margin_left = 0.135399
+margin_top = 41.4236
+margin_right = 83.1354
+margin_bottom = 55.4236
+custom_styles/panel = SubResource( 3 )
+
+[node name="Panel" type="Panel" parent="previousPage"]
+margin_left = -3.8147e-06
+margin_top = -6.88647
+margin_right = 13.0
+margin_bottom = 39.1135
+rect_scale = Vector2( 2.96156, 0.875069 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="previousPage"]
+position = Vector2( 19.7986, 13.7728 )
+scale = Vector2( 0.229187, 0.241441 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="previousPage"]
+visible = false
+modulate = Color( 1, 1, 1, 0.462745 )
+position = Vector2( 104.06, 500 )
+scale = Vector2( 0.0132889, 0.0132889 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="previousPage"]
+visible = false
+margin_left = 7.62939e-06
+margin_top = 41.3186
+margin_right = 128.0
+margin_bottom = 64.3186
+rect_scale = Vector2( 0.646816, 0.692711 )
+theme = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Back to level selection"
+
+[node name="back" type="Button" parent="previousPage"]
+margin_top = -6.88647
+margin_right = 12.0
+margin_bottom = 13.1135
+rect_scale = Vector2( 3.45059, 2.0856 )
+flat = true
+
+[node name="letter" type="Control" parent="."]
+margin_left = -8.0
+margin_top = -104.0
+margin_right = 32.0
+margin_bottom = -64.0
+rect_scale = Vector2( 1.13571, 1.06821 )
+
+[node name="Panel" type="Panel" parent="letter"]
+margin_left = 64.0
+margin_top = 496.0
+margin_right = 77.0
+margin_bottom = 542.0
+rect_scale = Vector2( 2.98791, 0.880343 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="letter"]
+position = Vector2( 84.5285, 516.754 )
+scale = Vector2( 0.0536357, 0.0565036 )
+texture = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="letter"]
+modulate = Color( 1, 1, 1, 0.462745 )
+position = Vector2( 104.06, 500 )
+scale = Vector2( 0.0132889, 0.0132889 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="letter"]
+margin_left = 101.06
+margin_top = 489.0
+margin_right = 141.06
+margin_bottom = 512.0
+theme = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "1"
+
+[node name="letter" type="Button" parent="letter"]
+margin_left = 63.3964
+margin_top = 494.287
+margin_right = 75.3964
+margin_bottom = 514.287
+rect_scale = Vector2( 3.38205, 2.26136 )
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button/buts/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[connection signal="pressed" from="previousPage/back" to="." method="_on_back_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/消除.ogg-2c33a968c5addf00f79f41772f2d5e79.oggstr"
+
+[deps]
+
+source_file="res://music/消除.ogg"
+dest_files=[ "res://.import/消除.ogg-2c33a968c5addf00f79f41772f2d5e79.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

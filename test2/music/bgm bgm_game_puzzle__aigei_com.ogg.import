@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bgm bgm_game_puzzle__aigei_com.ogg-59a345dc8bc073fefa84ba578b26a844.oggstr"
+
+[deps]
+
+source_file="res://music/bgm bgm_game_puzzle__aigei_com.ogg"
+dest_files=[ "res://.import/bgm bgm_game_puzzle__aigei_com.ogg-59a345dc8bc073fefa84ba578b26a844.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

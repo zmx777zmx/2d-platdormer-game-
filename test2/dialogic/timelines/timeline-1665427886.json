@@ -1,0 +1,99 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://music/bgm bgm_game_puzzle__aigei_com.ogg",
+			"volume": -25
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Welcome to Don's Marsh. The area is also a wetland park and is an ancient landscape, full of the sights and sounds of wildlife. For centuries this grazing marsh has played a vital role in the lives of people and wildlife. "
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221868.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221868.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What kind of activities can I do at the venue?"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The area has now been carefully restored. There are 4 miles (6 km) of nature trails to explore on foot, three viewpoints and two picnic areas.\nThe park is full of brilliant artwork and sculptures dotted around the fields and marshes. Come and do some exploring."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1665427886.json",
+		"name": "timeline-Don'sMarsh"
+	}
+}

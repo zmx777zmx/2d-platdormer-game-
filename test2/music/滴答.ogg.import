@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/滴答.ogg-911d30d43235f6106509e850989a2e9b.oggstr"
+
+[deps]
+
+source_file="res://music/滴答.ogg"
+dest_files=[ "res://.import/滴答.ogg-911d30d43235f6106509e850989a2e9b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

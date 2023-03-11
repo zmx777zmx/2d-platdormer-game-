@@ -1,0 +1,202 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=1]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WinLevel3.gd" type="Script" id=3]
+[ext_resource path="res://images/WIN.png" type="Texture" id=4]
+[ext_resource path="res://images/zone3-removebg-preview.png" type="Texture" id=5]
+[ext_resource path="res://images/pound Lane code.png" type="Texture" id=6]
+[ext_resource path="res://images/story intro cover.png" type="Texture" id=7]
+[ext_resource path="res://images/zone4-removebg-preview.png" type="Texture" id=8]
+[ext_resource path="res://gamescene/ProgressBarWin.tres" type="Theme" id=9]
+[ext_resource path="res://LoadingLevel5.gd" type="Script" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.945098, 0.956863, 0.882353, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.886275, 0.886275, 0.886275, 0.592157 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.658824, 0.74902, 0.678431, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color( 1, 0.905882, 0.658824, 0.94902 )
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.698039, 0.752941, 0.588235, 1 )
+
+[node name="WinLevel3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.999242, 0.971662 )
+rect_pivot_offset = Vector2( -301, 9 )
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 0.992157, 0.992157, 0.992157, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 18.0
+margin_bottom = 11.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 405.0
+margin_top = 400.0
+margin_right = 646.0
+margin_bottom = 423.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Click the label to explore offline activities?"
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 791.0
+margin_top = 398.0
+margin_right = 831.0
+margin_bottom = 438.0
+rect_scale = Vector2( 4.90936, 3.99601 )
+custom_styles/panel = SubResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.6 )
+margin_left = 711.0
+margin_top = 338.0
+margin_right = 1391.0
+margin_bottom = 756.0
+rect_scale = Vector2( 0.615561, 0.658408 )
+theme = ExtResource( 1 )
+icon = ExtResource( 8 )
+flat = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 797.0
+margin_top = 355.0
+margin_right = 918.0
+margin_bottom = 378.0
+rect_scale = Vector2( 1.5181, 1.43275 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Next Level - Zone 4"
+
+[node name="Sprite7" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.698039 )
+position = Vector2( 534, 515 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 527, 180 )
+scale = Vector2( 1.20135, 1.20135 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0.341176, 0.341176, 0.341176, 1 )
+position = Vector2( 514, 433 )
+scale = Vector2( 1.1871, 0.00598873 )
+texture = ExtResource( 7 )
+
+[node name="coin" parent="." instance=ExtResource( 2 )]
+position = Vector2( 62, 65.0003 )
+scale = Vector2( 0.670548, 0.573838 )
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 88.9997
+margin_top = 49.0
+margin_right = 129.0
+margin_bottom = 72.0
+rect_scale = Vector2( 1.30504, 1.30504 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "X 1"
+
+[node name="PoundLane" type="Button" parent="."]
+margin_left = 398.0
+margin_top = 42.0
+margin_right = 410.0
+margin_bottom = 62.0
+rect_scale = Vector2( 13.9422, 1.25574 )
+flat = true
+
+[node name="Panel3" type="Panel" parent="."]
+margin_left = 400.0
+margin_top = 43.0
+margin_right = 545.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.733584, 1.28474 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Panel4" type="Panel" parent="."]
+margin_left = 407.0
+margin_top = 47.0
+margin_right = 447.0
+margin_bottom = 87.0
+rect_scale = Vector2( 2.31515, 0.35325 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 420.0
+margin_top = 43.0
+margin_right = 557.0
+margin_bottom = 66.0
+rect_scale = Vector2( 1.00587, 1 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pound Lane"
+
+[node name="PoundLane2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 457.575, 125.296 )
+scale = Vector2( 0.167225, 0.167225 )
+texture = ExtResource( 6 )
+
+[node name="LoadingLevel5" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 10 )
+
+[node name="ProgressBar" type="ProgressBar" parent="LoadingLevel5"]
+visible = false
+margin_left = 325.0
+margin_top = 437.0
+margin_right = 704.0
+margin_bottom = 455.0
+theme = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="LoadingLevel5"]
+visible = false
+margin_left = 330.0
+margin_top = 434.0
+margin_right = 412.0
+margin_bottom = 457.0
+rect_scale = Vector2( 1.02422, 0.715304 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "loading........."
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="LoadingLevel5" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="PoundLane" to="." method="_on_PoundLane_mouse_entered"]
+[connection signal="pressed" from="PoundLane" to="." method="_on_PoundLane_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/任务完成.ogg-48fa8ba06ba0c71b6e0013cea3a7bf4a.oggstr"
+
+[deps]
+
+source_file="res://music/任务完成.ogg"
+dest_files=[ "res://.import/任务完成.ogg-48fa8ba06ba0c71b6e0013cea3a7bf4a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

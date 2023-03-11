@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/夜晚公园环境音效_爱给网_aigei_com.ogg-2d4325e49c16ed30b71f7820b782cbab.oggstr"
+
+[deps]
+
+source_file="res://music/夜晚公园环境音效_爱给网_aigei_com.ogg"
+dest_files=[ "res://.import/夜晚公园环境音效_爱给网_aigei_com.ogg-2d4325e49c16ed30b71f7820b782cbab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

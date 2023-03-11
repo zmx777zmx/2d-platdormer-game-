@@ -1,0 +1,978 @@
+[gd_scene load_steps=91 format=2]
+
+[ext_resource path="res://cloud.gd" type="Script" id=1]
+[ext_resource path="res://images/cloud1.png" type="Texture" id=2]
+[ext_resource path="res://images/cloud.png" type="Texture" id=3]
+[ext_resource path="res://images/gamescene3.jpg" type="Texture" id=4]
+[ext_resource path="res://addons/rmsmartshape/vertex_properties.gd" type="Script" id=5]
+[ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=6]
+[ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=7]
+[ext_resource path="res://addons/rmsmartshape/shapes/point_array.gd" type="Script" id=8]
+[ext_resource path="res://addons/rmsmartshape/shapes/point.gd" type="Script" id=9]
+[ext_resource path="res://player.gd" type="Script" id=10]
+[ext_resource path="res://NPC-PoundLane.gd" type="Script" id=11]
+[ext_resource path="res://player-timer.gd" type="Script" id=12]
+[ext_resource path="res://music/jump.ogg" type="AudioStream" id=13]
+[ext_resource path="res://images/player/player idle.png" type="Texture" id=14]
+[ext_resource path="res://images/player/npc l5.png" type="Texture" id=15]
+[ext_resource path="res://images/player/npc l3.png" type="Texture" id=16]
+[ext_resource path="res://images/player/npc l4.png" type="Texture" id=17]
+[ext_resource path="res://images/player/npc r3.png" type="Texture" id=18]
+[ext_resource path="res://images/player/play jump 1.png" type="Texture" id=19]
+[ext_resource path="res://images/player/npc r4.png" type="Texture" id=20]
+[ext_resource path="res://images/player/npc r2.png" type="Texture" id=21]
+[ext_resource path="res://images/player/play jump 3.png" type="Texture" id=22]
+[ext_resource path="res://images/player/play jump 2.png" type="Texture" id=23]
+[ext_resource path="res://images/player/npc r1.png" type="Texture" id=24]
+[ext_resource path="res://images/player/npc l1.png" type="Texture" id=25]
+[ext_resource path="res://images/dust.png" type="Texture" id=26]
+[ext_resource path="res://images/player/npc l2.png" type="Texture" id=27]
+[ext_resource path="res://images/player/npc r5.png" type="Texture" id=28]
+[ext_resource path="res://music/游戏气泡.ogg" type="AudioStream" id=29]
+[ext_resource path="res://images/chat icon.png" type="Texture" id=30]
+[ext_resource path="res://images/npc.png" type="Texture" id=31]
+[ext_resource path="res://introLevel2.gd" type="Script" id=32]
+[ext_resource path="res://HUD2.gd" type="Script" id=33]
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=34]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=35]
+[ext_resource path="res://timer.gd" type="Script" id=36]
+[ext_resource path="res://images/timer.png" type="Texture" id=37]
+[ext_resource path="res://images/life-lost.png" type="Texture" id=38]
+[ext_resource path="res://images/life.png" type="Texture" id=39]
+[ext_resource path="res://images/coin1.png" type="Texture" id=40]
+[ext_resource path="res://images/Level3 intro.png" type="Texture" id=41]
+[ext_resource path="res://NPC-question2.gd" type="Script" id=42]
+[ext_resource path="res://enermy.tscn" type="PackedScene" id=43]
+[ext_resource path="res://images/pound lane11.jpg" type="Texture" id=44]
+[ext_resource path="res://images/chat1.png" type="Texture" id=45]
+[ext_resource path="res://images/npc-asking.png" type="Texture" id=46]
+[ext_resource path="res://music/Stardust.ogg" type="AudioStream" id=47]
+[ext_resource path="res://Level3.gd" type="Script" id=48]
+[ext_resource path="res://images/pondlane story.png" type="Texture" id=49]
+[ext_resource path="res://images/road guid.png" type="Texture" id=50]
+[ext_resource path="res://test setting.tscn" type="PackedScene" id=54]
+
+[sub_resource type="SpriteFrames" id=1033]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "walk-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "walk-left",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1034]
+radius = 24.75
+height = 94.5002
+
+[sub_resource type="Gradient" id=1035]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.380392 )
+
+[sub_resource type="GradientTexture" id=1071]
+gradient = SubResource( 1035 )
+
+[sub_resource type="Curve" id=1036]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.61036 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=1072]
+curve = SubResource( 1036 )
+
+[sub_resource type="ParticlesMaterial" id=1037]
+flag_disable_z = true
+spread = 40.43
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 20.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 514.8
+scale = 2.0
+scale_curve = SubResource( 1072 )
+color_ramp = SubResource( 1071 )
+
+[sub_resource type="ParticlesMaterial" id=1038]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="CircleShape2D" id=1039]
+radius = 48.6621
+
+[sub_resource type="StyleBoxFlat" id=1041]
+bg_color = Color( 0.45098, 0.0745098, 0.0745098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1042]
+bg_color = Color( 0.384314, 0.0196078, 0.0666667, 0.458824 )
+
+[sub_resource type="StyleBoxFlat" id=1043]
+bg_color = Color( 0.34902, 0.0627451, 0.0627451, 1 )
+border_width_left = 1
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 3
+border_color = Color( 1, 1, 1, 1 )
+corner_detail = 5
+shadow_color = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1040]
+bg_color = Color( 0.905882, 0.905882, 0.905882, 0.854902 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.443137, 0.168627, 0.168627, 1 )
+border_blend = true
+
+[sub_resource type="CircleShape2D" id=1044]
+radius = 48.0
+
+[sub_resource type="StyleBoxFlat" id=1123]
+bg_color = Color( 0.337255, 0.0156863, 0.0156863, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Resource" id=1124]
+script = ExtResource( 5 )
+texture_idx = 3
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1125]
+script = ExtResource( 9 )
+position = Vector2( -131.64, 451.51 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1124 )
+
+[sub_resource type="Resource" id=1126]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1127]
+script = ExtResource( 9 )
+position = Vector2( 1511.3, 725.514 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1126 )
+
+[sub_resource type="Resource" id=1128]
+script = ExtResource( 5 )
+texture_idx = 3
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1129]
+script = ExtResource( 9 )
+position = Vector2( -131.64, 451.51 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1128 )
+
+[sub_resource type="Resource" id=1130]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1131]
+script = ExtResource( 9 )
+position = Vector2( -139.296, 775.051 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1130 )
+
+[sub_resource type="Resource" id=1132]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1133]
+script = ExtResource( 9 )
+position = Vector2( 1509.95, 6.38797 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1132 )
+
+[sub_resource type="Resource" id=1134]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1135]
+script = ExtResource( 9 )
+position = Vector2( 1387.25, 10.5924 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1134 )
+
+[sub_resource type="Resource" id=1136]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1137]
+script = ExtResource( 9 )
+position = Vector2( 1183, 396.5 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1136 )
+
+[sub_resource type="Resource" id=1138]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1139]
+script = ExtResource( 9 )
+position = Vector2( 865.128, 398.462 )
+point_in = Vector2( -105.036, 24.5084 )
+point_out = Vector2( 105.036, -24.5084 )
+properties = SubResource( 1138 )
+
+[sub_resource type="Resource" id=1140]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1141]
+script = ExtResource( 9 )
+position = Vector2( 487.372, 469.537 )
+point_in = Vector2( -69.4901, 3.11816 )
+point_out = Vector2( 69.4901, -3.11816 )
+properties = SubResource( 1140 )
+
+[sub_resource type="Resource" id=1142]
+script = ExtResource( 5 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1143]
+script = ExtResource( 9 )
+position = Vector2( 33, 460 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1142 )
+
+[sub_resource type="Resource" id=1144]
+script = ExtResource( 8 )
+_points = {
+0: SubResource( 1125 ),
+2: SubResource( 1127 ),
+3: SubResource( 1129 ),
+4: SubResource( 1131 ),
+7: SubResource( 1133 ),
+8: SubResource( 1135 ),
+9: SubResource( 1137 ),
+10: SubResource( 1139 ),
+11: SubResource( 1141 ),
+13: SubResource( 1143 )
+}
+_point_order = [ 0, 13, 11, 10, 9, 8, 7, 2, 4, 3 ]
+_constraints = {
+[ 0, 3 ]: 15
+}
+_next_key = 14
+
+[sub_resource type="Resource" id=1070]
+script = ExtResource( 6 )
+_edge_meta_materials = [  ]
+fill_textures = [  ]
+fill_texture_normals = [  ]
+fill_texture_z_index = -10
+fill_mesh_offset = 0.0
+render_offset = 0.0
+
+[sub_resource type="RectangleShape2D" id=1096]
+extents = Vector2( 7, 236 )
+
+[sub_resource type="RectangleShape2D" id=1097]
+extents = Vector2( 821, 1 )
+
+[node name="Level3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -360, 56 )
+script = ExtResource( 48 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 456, 120 )
+scale = Vector2( 0.248797, 0.293443 )
+texture = ExtResource( 44 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 240.5, 252 )
+scale = Vector2( 0.881453, 0.868632 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 128, 264 )
+scale = Vector2( 0.800848, 0.800848 )
+texture = ExtResource( 4 )
+
+[node name="cloud" type="ParallaxLayer" parent="ParallaxBackground"]
+script = ExtResource( 1 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( 576, 264 )
+scale = Vector2( 1.48282, 1.77921 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( -424, 136 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/cloud"]
+position = Vector2( 1264, 216 )
+scale = Vector2( 0.190618, 0.215363 )
+texture = ExtResource( 2 )
+
+[node name="road guidence" type="Node2D" parent="."]
+
+[node name="road guidance" type="Sprite" parent="road guidence"]
+position = Vector2( 816, 328 )
+scale = Vector2( 0.316446, 0.316446 )
+texture = ExtResource( 50 )
+
+[node name="Label" type="Label" parent="road guidence"]
+margin_left = 794.0
+margin_top = 281.0
+margin_right = 837.0
+margin_bottom = 304.0
+rect_rotation = -1.07152
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Level 4"
+
+[node name="player" type="KinematicBody2D" parent="."]
+position = Vector2( -240, -280 )
+scale = Vector2( 1.3, 1.3 )
+collision_mask = 127
+script = ExtResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 545, 398 )
+scale = Vector2( 0.801762, 0.801762 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+editor_draw_screen = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="player"]
+position = Vector2( 458, 537 )
+scale = Vector2( 0.357527, 0.339894 )
+frames = SubResource( 1033 )
+animation = "walk-left"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( 455, 537 )
+scale = Vector2( 0.444444, 0.444444 )
+shape = SubResource( 1034 )
+
+[node name="wallcheckerRight" type="RayCast2D" parent="player"]
+position = Vector2( 455, 530 )
+rotation = -1.5708
+scale = Vector2( 0.7, 0.7 )
+enabled = true
+
+[node name="wallcheckerLeft" type="RayCast2D" parent="player"]
+position = Vector2( 452, 530 )
+rotation = 1.5708
+scale = Vector2( 0.7, 0.7 )
+enabled = true
+
+[node name="player-timer" type="Timer" parent="player"]
+script = ExtResource( 12 )
+
+[node name="Particles2D" type="Particles2D" parent="player"]
+show_behind_parent = true
+position = Vector2( 456.384, 568.001 )
+rotation = -0.471239
+amount = 60
+local_coords = false
+process_material = SubResource( 1037 )
+texture = ExtResource( 26 )
+
+[node name="Timer" type="Timer" parent="player"]
+wait_time = 0.6
+one_shot = true
+
+[node name="jump" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource( 13 )
+volume_db = -35.0
+
+[node name="birds" type="Particles2D" parent="player"]
+position = Vector2( 1104.92, 608 )
+process_material = SubResource( 1038 )
+
+[node name="npc" type="Node2D" parent="."]
+
+[node name="NPC-PoundLane" type="Area2D" parent="npc"]
+position = Vector2( 3880, 168 )
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 256
+script = ExtResource( 11 )
+
+[node name="npc" type="Sprite" parent="npc/NPC-PoundLane"]
+position = Vector2( -4208, 328 )
+scale = Vector2( 0.443387, 0.443387 )
+texture = ExtResource( 31 )
+
+[node name="chat" type="Sprite" parent="npc/NPC-PoundLane"]
+position = Vector2( -4168, 264 )
+scale = Vector2( 0.591244, 0.591244 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc/NPC-PoundLane"]
+position = Vector2( -4208, 328 )
+shape = SubResource( 1039 )
+
+[node name="SoundNpc" type="AudioStreamPlayer" parent="npc/NPC-PoundLane"]
+stream = ExtResource( 29 )
+volume_db = -20.0
+
+[node name="PondLane" type="Sprite" parent="npc"]
+visible = false
+position = Vector2( 640, 288 )
+scale = Vector2( 0.741369, 0.741369 )
+texture = ExtResource( 49 )
+
+[node name="NPC-question2" type="Area2D" parent="npc"]
+position = Vector2( 4192, 160 )
+scale = Vector2( 0.826252, 0.681234 )
+collision_layer = 256
+script = ExtResource( 42 )
+
+[node name="npc" type="Sprite" parent="npc/NPC-question2"]
+position = Vector2( -4208, 328 )
+scale = Vector2( 0.113028, 0.113028 )
+texture = ExtResource( 46 )
+
+[node name="chat1" type="Sprite" parent="npc/NPC-question2"]
+modulate = Color( 0.564706, 0.564706, 0.564706, 1 )
+position = Vector2( -4154.89, 251.037 )
+scale = Vector2( 0.137369, 0.149678 )
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc/NPC-question2"]
+position = Vector2( -4208, 328 )
+shape = SubResource( 1039 )
+
+[node name="SoundNpc" type="AudioStreamPlayer" parent="npc/NPC-question2"]
+stream = ExtResource( 29 )
+volume_db = -20.0
+
+[node name="HUD2" type="CanvasLayer" parent="."]
+script = ExtResource( 33 )
+
+[node name="Panel5" type="Panel" parent="HUD2"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 8.0
+margin_top = 26.0
+margin_right = 31.0
+margin_bottom = 46.0
+rect_scale = Vector2( 2.91888, 1.00066 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel6" type="Panel" parent="HUD2"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 80.0
+margin_right = 40.0
+margin_bottom = 98.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel" type="Panel" parent="HUD2"]
+margin_left = 54.0
+margin_top = 72.0
+margin_right = 71.0
+margin_bottom = 80.0
+rect_scale = Vector2( 9.03226, 4.05232 )
+custom_styles/panel = SubResource( 1042 )
+
+[node name="Label2" type="Label" parent="HUD2"]
+margin_left = 56.0
+margin_top = 69.0
+margin_right = 85.0
+margin_bottom = 92.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 34 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Mission Church"
+align = 1
+valign = 1
+
+[node name="Panel7" type="Panel" parent="HUD2"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 107.0
+margin_right = 40.0
+margin_bottom = 125.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel8" type="Panel" parent="HUD2"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 134.0
+margin_right = 40.0
+margin_bottom = 152.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel9" type="Panel" parent="HUD2"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 162.0
+margin_right = 40.0
+margin_bottom = 180.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel10" type="Panel" parent="HUD2"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 189.0
+margin_right = 40.0
+margin_bottom = 207.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel11" type="Panel" parent="HUD2"]
+visible = false
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 24.0
+margin_top = 216.0
+margin_right = 40.0
+margin_bottom = 234.0
+rect_scale = Vector2( 0.729783, 0.670208 )
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Label3" type="Label" parent="HUD2"]
+visible = false
+margin_left = 37.0
+margin_top = 100.0
+margin_right = 188.0
+margin_bottom = 123.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 34 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Tiffayne'sS Farmhouse"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="HUD2"]
+visible = false
+margin_left = 42.0
+margin_top = 130.0
+margin_right = 148.0
+margin_bottom = 153.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 34 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Mission Church"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="HUD2"]
+visible = false
+margin_left = 56.0
+margin_top = 152.0
+margin_right = 85.0
+margin_bottom = 175.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 34 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "All Saint Church"
+align = 1
+valign = 1
+
+[node name="Label6" type="Label" parent="HUD2"]
+visible = false
+margin_left = 24.0
+margin_top = 179.0
+margin_right = 130.0
+margin_bottom = 202.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 34 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Fish Pond"
+align = 1
+valign = 1
+
+[node name="Label7" type="Label" parent="HUD2"]
+visible = false
+margin_left = 32.0
+margin_top = 207.0
+margin_right = 138.0
+margin_bottom = 230.0
+rect_scale = Vector2( 1.2271, 1.42915 )
+theme = ExtResource( 34 )
+custom_colors/font_outline_modulate = Color( 0.458824, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0, 0, 1 )
+text = "Harrows Bar"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="HUD2"]
+margin_left = 9.0
+margin_top = 28.0
+margin_right = 73.0
+margin_bottom = 51.0
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Level 1 -3"
+
+[node name="timer" type="Control" parent="HUD2"]
+margin_left = 125.0
+margin_top = 26.0
+margin_right = 165.0
+margin_bottom = 66.0
+theme = ExtResource( 34 )
+script = ExtResource( 36 )
+minutes = 2
+seconds = 30
+
+[node name="Timer2" type="Sprite" parent="HUD2/timer"]
+position = Vector2( -28, 8 )
+scale = Vector2( 0.119668, 0.119668 )
+texture = ExtResource( 37 )
+
+[node name="Panel" type="Panel" parent="HUD2/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 22.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel4" type="Panel" parent="HUD2/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = -1.0
+margin_top = 3.0
+margin_right = 22.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel2" type="Panel" parent="HUD2/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 40.0
+margin_top = 3.0
+margin_right = 63.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Panel3" type="Panel" parent="HUD2/timer"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
+margin_left = 84.0
+margin_top = 3.0
+margin_right = 107.0
+margin_bottom = 23.0
+custom_styles/panel = SubResource( 1041 )
+
+[node name="Timer" type="Timer" parent="HUD2/timer"]
+autostart = true
+
+[node name="min" type="RichTextLabel" parent="HUD2/timer"]
+margin_right = 19.0
+margin_bottom = 27.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "00"
+
+[node name="sec" type="RichTextLabel" parent="HUD2/timer"]
+margin_left = 41.0
+margin_right = 59.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "00"
+
+[node name="dsec" type="RichTextLabel" parent="HUD2/timer"]
+margin_left = 85.0
+margin_right = 105.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "00"
+
+[node name="colon" type="RichTextLabel" parent="HUD2/timer"]
+margin_left = 28.0
+margin_top = -3.0
+margin_right = 68.0
+margin_bottom = 37.0
+rect_scale = Vector2( 1.2, 1.2 )
+theme = ExtResource( 34 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = ":"
+
+[node name="colon1" type="RichTextLabel" parent="HUD2/timer"]
+margin_left = 71.0
+margin_top = -3.0
+margin_right = 111.0
+margin_bottom = 37.0
+rect_scale = Vector2( 1.2, 1.2 )
+theme = ExtResource( 34 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = ":"
+
+[node name="collection" type="Control" parent="HUD2"]
+margin_left = 944.0
+margin_top = 24.0
+margin_right = 984.0
+margin_bottom = 64.0
+theme = ExtResource( 34 )
+
+[node name="Panel" type="Panel" parent="HUD2/collection"]
+margin_left = -5.0
+margin_top = 2.0
+margin_right = 35.0
+margin_bottom = 37.0
+rect_scale = Vector2( 3.01324, 1.13947 )
+custom_styles/panel = SubResource( 1043 )
+
+[node name="Panel2" type="Panel" parent="HUD2/collection"]
+margin_left = -5.0
+margin_top = 50.0
+margin_right = 35.0
+margin_bottom = 71.0
+rect_scale = Vector2( 3.01324, 1.13947 )
+custom_styles/panel = SubResource( 1043 )
+
+[node name="Coins" type="Label" parent="HUD2/collection"]
+margin_left = 69.0
+margin_top = 8.0
+margin_right = 109.0
+margin_bottom = 31.0
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "##"
+
+[node name="X" type="Label" parent="HUD2/collection"]
+margin_left = 49.0
+margin_top = 8.0
+margin_right = 89.0
+margin_bottom = 31.0
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "X"
+
+[node name="hearts" type="TextureRect" parent="HUD2/collection"]
+margin_left = 2.0
+margin_top = 53.0
+margin_right = 443.0
+margin_bottom = 138.0
+rect_scale = Vector2( 0.242, 0.214 )
+texture = ExtResource( 39 )
+expand = true
+stretch_mode = 2
+
+[node name="heartsEmpty" type="TextureRect" parent="HUD2/collection"]
+margin_left = 2.0
+margin_top = 54.0
+margin_right = 436.0
+margin_bottom = 139.0
+rect_scale = Vector2( 0.245239, 0.199217 )
+texture = ExtResource( 38 )
+expand = true
+stretch_mode = 2
+
+[node name="Sprite" type="Sprite" parent="HUD2/collection"]
+modulate = Color( 1, 1, 1, 0.635294 )
+position = Vector2( 24, 24 )
+scale = Vector2( 0.0590974, 0.0554441 )
+texture = ExtResource( 40 )
+
+[node name="introLevel2" type="Node2D" parent="HUD2"]
+visible = false
+position = Vector2( 32, -32 )
+scale = Vector2( 0.88823, 0.88823 )
+script = ExtResource( 32 )
+
+[node name="Panel" type="Panel" parent="HUD2/introLevel2"]
+margin_left = 339.0
+margin_top = 279.0
+margin_right = 384.0
+margin_bottom = 312.0
+rect_scale = Vector2( 8.19164, 6.47262 )
+custom_styles/panel = SubResource( 1040 )
+
+[node name="Button" type="Button" parent="HUD2/introLevel2/Panel"]
+margin_left = 38.4888
+margin_top = 1.82211
+margin_right = 58.4888
+margin_bottom = 21.8221
+rect_scale = Vector2( 0.214408, 0.237653 )
+custom_colors/font_color_focus = Color( 0.443137, 0.0156863, 0.0156863, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.294118, 0, 0, 1 )
+text = "X"
+flat = true
+
+[node name="Label" type="Label" parent="HUD2/introLevel2/Panel"]
+margin_left = -33.2825
+margin_top = -29.9287
+margin_right = 6.71747
+margin_bottom = -15.9287
+
+[node name="Sprite" type="Sprite" parent="HUD2/introLevel2/Panel"]
+position = Vector2( 23.6978, 22.4135 )
+scale = Vector2( 0.0262584, 0.0332322 )
+texture = ExtResource( 41 )
+
+[node name="Label2" type="Label" parent="HUD2/introLevel2/Panel"]
+margin_left = 36.0758
+margin_top = 26.1574
+margin_right = 76.0758
+margin_bottom = 49.1574
+rect_scale = Vector2( 0.143842, 0.143842 )
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "X1"
+
+[node name="coin" parent="HUD2/introLevel2/Panel" instance=ExtResource( 35 )]
+position = Vector2( 34.0514, 28.0294 )
+scale = Vector2( 0.0573889, 0.0573889 )
+
+[node name="SETTING" parent="HUD2" instance=ExtResource( 54 )]
+
+[node name="Button" type="Button" parent="HUD2"]
+margin_left = 64.0
+margin_top = 424.0
+margin_right = 76.0
+margin_bottom = 444.0
+rect_scale = Vector2( 3.87941, 2.28229 )
+flat = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="enermy" parent="Node2D" instance=ExtResource( 43 )]
+position = Vector2( 1104, 312 )
+scale = Vector2( 0.130328, 0.126019 )
+
+[node name="enermy2" parent="Node2D" instance=ExtResource( 43 )]
+position = Vector2( 128, 400 )
+scale = Vector2( 0.1418, 0.151794 )
+
+[node name="passing" type="Area2D" parent="."]
+position = Vector2( 1520, -80 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="passing"]
+position = Vector2( -408, 304 )
+shape = SubResource( 1044 )
+
+[node name="Sprite" type="Sprite" parent="passing"]
+
+[node name="Panel" type="Panel" parent="passing"]
+visible = false
+margin_left = -656.0
+margin_top = 296.0
+margin_right = -504.0
+margin_bottom = 336.0
+rect_scale = Vector2( 0.542821, 0.542821 )
+custom_styles/panel = SubResource( 1123 )
+
+[node name="Label" type="Label" parent="passing"]
+visible = false
+margin_left = -648.0
+margin_top = 296.0
+margin_right = -586.0
+margin_bottom = 319.0
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "Next Level"
+
+[node name="coin" parent="." instance=ExtResource( 35 )]
+position = Vector2( 584, 344 )
+scale = Vector2( 0.723556, 0.6038 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="SS2D_Shape_Closed" type="Node2D" parent="StaticBody2D"]
+script = ExtResource( 7 )
+_points = SubResource( 1144 )
+material_overrides = {
+}
+shape_material = SubResource( 1070 )
+tessellation_stages = 5
+tessellation_tolerence = 4.0
+flip_edges = false
+render_edges = true
+collision_size = 32.0
+collision_offset = 0.0
+collision_polygon_node_path = NodePath("../CollisionPolygon2D")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+modulate = Color( 1, 1, 1, 0.3 )
+polygon = PoolVector2Array( -134.935, 447.958, 33.0001, 459.998, 487.365, 469.452, 865.128, 398.461, 908.941, 391.325, 959.107, 387.805, 1063.45, 388.282, 1181.74, 394.242, 1386.11, 8.76657, 1513.33, 2.88201, 1514.55, 728.665, -142.816, 778.593 )
+
+[node name="SoundLevel1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 47 )
+volume_db = -35.0
+autoplay = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 121, 156 )
+shape = SubResource( 1096 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 968, 96 )
+shape = SubResource( 1096 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 808, 7 )
+shape = SubResource( 1097 )
+
+[connection signal="timeout" from="player/player-timer" to="player" method="_on_playertimer_timeout"]
+[connection signal="timeout" from="player/Timer" to="player" method="_on_Timer_timeout"]
+[connection signal="timeout" from="HUD2/timer/Timer" to="HUD2/timer" method="_on_Timer_timeout"]
+[connection signal="pressed" from="HUD2/introLevel2/Panel/Button" to="HUD2/introLevel2" method="_on_Button_pressed"]
+[connection signal="pressed" from="HUD2/Button" to="." method="_on_Button_pressed"]
+[connection signal="body_entered" from="passing" to="player" method="_on_passing_body_entered"]
+[connection signal="body_entered" from="coin" to="." method="_on_coin_body_entered"]

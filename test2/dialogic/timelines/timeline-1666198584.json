@@ -1,0 +1,103 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://music/bgm bgm_game_puzzle__aigei_com.ogg",
+			"volume": -25
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1660487323.cfg"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1660502085.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1660502085.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Which of the buildings in this pass has a longer history?"
+		},
+		{
+			"choice": "A. The St Margaret’s C of E primary school ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://music/error.ogg",
+			"volume": 0
+		},
+		{
+			"change_scene": "res://Level4.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "B. Saddlers' Hall Farmhouse ",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://music/叮.ogg",
+			"volume": 0
+		},
+		{
+			"character": "character-1660502085.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's correct! Please jump to next level."
+		},
+		{
+			"change_scene": "res://WinLevel4.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1666198584.json",
+		"name": "timeline-question3"
+	}
+}

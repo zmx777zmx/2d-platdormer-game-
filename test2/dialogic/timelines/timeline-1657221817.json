@@ -1,0 +1,99 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://music/bgm bgm_game_puzzle__aigei_com.ogg",
+			"volume": -20
+		},
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 0.3,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi, Nice to see you! This is Steve. This is the location of the enigmatic WWII \"Ring of Light!\" There is a lot of discussion about the \"HaloRing of Light\" tale. It included \"death ray\" devices, \"searchlights illuminating German skydivers,\" and more to \"dazzle enemy pilots.\" "
+		},
+		{
+			"animation": "3-fade_in_up_big.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221868.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221868.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sounds Cool!"
+		},
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1657221878.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Continue the game to turn on the light button and watch what happens to help the villagers find the enemy plane!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1657221817.json",
+		"name": "timeline-1Ruins"
+	}
+}

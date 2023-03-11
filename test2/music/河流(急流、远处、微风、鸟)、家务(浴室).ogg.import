@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/河流(急流、远处、微风、鸟)、家务(浴室).ogg-b36776db1548f8491bb13fdd80f24c7f.oggstr"
+
+[deps]
+
+source_file="res://music/河流(急流、远处、微风、鸟)、家务(浴室).ogg"
+dest_files=[ "res://.import/河流(急流、远处、微风、鸟)、家务(浴室).ogg-b36776db1548f8491bb13fdd80f24c7f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

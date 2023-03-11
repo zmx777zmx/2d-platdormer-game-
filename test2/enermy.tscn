@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://images/enermy1.png" type="Texture" id=1]
+[ext_resource path="res://images/enermy3.png" type="Texture" id=2]
+[ext_resource path="res://images/enermy2.png" type="Texture" id=3]
+[ext_resource path="res://enermy.gd" type="Script" id=4]
+[ext_resource path="res://images/enermy4.png" type="Texture" id=5]
+[ext_resource path="res://music/消除.ogg" type="AudioStream" id=6]
+[ext_resource path="res://music/error.ogg" type="AudioStream" id=7]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "squashed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "enermy",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 56, 87.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 114, 35.75 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 153.571, 49.9763 )
+
+[node name="enermy" type="KinematicBody2D"]
+position = Vector2( 173, -118 )
+scale = Vector2( 1.5, 1.5 )
+collision_layer = 8
+collision_mask = 259
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -28, 244 )
+scale = Vector2( 1.23609, 1.07822 )
+frames = SubResource( 3 )
+animation = "enermy"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -36, 260 )
+shape = SubResource( 2 )
+
+[node name="floor_checker" type="RayCast2D" parent="."]
+position = Vector2( -37, 308 )
+scale = Vector2( 2, 2 )
+collision_mask = 5
+
+[node name="top_checker" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 273
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
+position = Vector2( -41.3333, 125 )
+shape = SubResource( 4 )
+
+[node name="slides_checker" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 273
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slides_checker"]
+position = Vector2( -38, 315.333 )
+shape = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="soundSquash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.0
+stream_paused = true
+
+[node name="soundHurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.0
+
+[connection signal="body_entered" from="top_checker" to="." method="_on_top_checker_body_entered"]
+[connection signal="body_entered" from="slides_checker" to="." method="_on_slides_checker_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

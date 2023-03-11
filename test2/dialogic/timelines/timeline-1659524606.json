@@ -1,0 +1,99 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://music/bgm bgm_game_puzzle__aigei_com.ogg",
+			"volume": -25
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1660487323.cfg"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1660502085.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1660502085.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "why the  pound-keeper being referred to as ‘The Tallyman’?"
+		},
+		{
+			"choice": "A. Because the stick that serves as a receipt is called a \"Tally-stick\"",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://music/叮.ogg",
+			"volume": 10
+		},
+		{
+			"character": "character-1660502085.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's correct! Please jump to next level."
+		},
+		{
+			"change_scene": "res://WinLevel3.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "B. Because the cages in which the animals are kept are called \"Tally-sticks\"",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://music/error.ogg",
+			"volume": 10
+		},
+		{
+			"change_scene": "res://WinLevel3.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1659524606.json",
+		"name": "timeline-question2"
+	}
+}

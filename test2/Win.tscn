@@ -1,0 +1,267 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=1]
+[ext_resource path="res://Win.gd" type="Script" id=2]
+[ext_resource path="res://images/win summary.png" type="Texture" id=3]
+[ext_resource path="res://images/码.png" type="Texture" id=4]
+[ext_resource path="res://images/zone2-removebg-preview.png" type="Texture" id=5]
+[ext_resource path="res://gamescene/game map.tres" type="Theme" id=6]
+[ext_resource path="res://images/story intro cover.png" type="Texture" id=7]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://images/code/harrow bar .png" type="Texture" id=9]
+[ext_resource path="res://images/code/all-satints .png" type="Texture" id=10]
+[ext_resource path="res://images/code/houseshoe.png" type="Texture" id=11]
+[ext_resource path="res://images/code/benfleet hall .png" type="Texture" id=12]
+[ext_resource path="res://images/code/moat.png" type="Texture" id=13]
+[ext_resource path="res://images/WIN.png" type="Texture" id=14]
+[ext_resource path="res://LoadingLevel1.gd" type="Script" id=15]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.945098, 0.956863, 0.882353, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.886275, 0.886275, 0.886275, 0.592157 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.654902, 0.678431, 0.615686, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color( 1, 0.905882, 0.662745, 0.94902 )
+shadow_size = 1
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 29.0
+margin_bottom = 18.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 373.0
+margin_top = 399.0
+margin_right = 614.0
+margin_bottom = 422.0
+rect_scale = Vector2( 1.11829, 1.11829 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Click the label to explore offline activities?"
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 787.0
+margin_top = 420.0
+margin_right = 827.0
+margin_bottom = 460.0
+rect_scale = Vector2( 5.02445, 4.01446 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.6 )
+margin_left = 744.0
+margin_top = 388.0
+margin_right = 6399.0
+margin_bottom = 4193.0
+rect_scale = Vector2( 0.0521984, 0.0555568 )
+theme = ExtResource( 1 )
+text = " next level"
+icon = SubResource( 3 )
+flat = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 795.0
+margin_top = 388.0
+margin_right = 916.0
+margin_bottom = 411.0
+rect_scale = Vector2( 1.5181, 1.43275 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Next Level - Zone 2"
+
+[node name="Zone2-removebg-preview" type="Sprite" parent="."]
+position = Vector2( 896, 494 )
+scale = Vector2( 0.402993, 0.431251 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 488, 237 )
+scale = Vector2( 0.472934, 0.472934 )
+texture = ExtResource( 3 )
+
+[node name="Benfleet Hall" type="Button" parent="."]
+margin_left = 514.0
+margin_top = 113.0
+margin_right = 526.0
+margin_bottom = 133.0
+rect_scale = Vector2( 5.19138, 1.18694 )
+flat = true
+
+[node name="Benfleet Hall2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 543, 57 )
+scale = Vector2( 0.151713, 0.144443 )
+texture = ExtResource( 12 )
+
+[node name="Ruins" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.556863 )
+margin_left = 445.0
+margin_top = 214.0
+margin_right = 537.0
+margin_bottom = 254.0
+rect_scale = Vector2( 0.727088, 0.653172 )
+flat = true
+
+[node name="Ruins2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 481, 169 )
+scale = Vector2( 0.107918, 0.107918 )
+texture = ExtResource( 4 )
+
+[node name="Harrow Bar" type="Button" parent="."]
+margin_left = 509.0
+margin_top = 216.0
+margin_right = 521.0
+margin_bottom = 236.0
+rect_scale = Vector2( 5.08458, 0.966673 )
+flat = true
+
+[node name="Harrow Bar2" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.709804 )
+position = Vector2( 539, 175 )
+scale = Vector2( 0.140593, 0.140593 )
+texture = ExtResource( 9 )
+
+[node name="All Saint Church" type="Button" parent="."]
+margin_left = 566.0
+margin_top = 251.0
+margin_right = 578.0
+margin_bottom = 271.0
+rect_scale = Vector2( 4.6618, 0.910312 )
+flat = true
+
+[node name="All Saint Church2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 598, 212 )
+scale = Vector2( 0.124281, 0.124281 )
+texture = ExtResource( 10 )
+
+[node name="Fish Pond" type="Button" parent="."]
+margin_left = 648.0
+margin_top = 146.0
+margin_right = 660.0
+margin_bottom = 166.0
+rect_scale = Vector2( 4.52836, 1.02239 )
+flat = true
+
+[node name="Fish Pond2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 676, 102 )
+scale = Vector2( 0.127253, 0.127253 )
+texture = ExtResource( 13 )
+
+[node name="Horsehoe Cottage" type="Button" parent="."]
+margin_left = 319.0
+margin_top = 249.0
+margin_right = 331.0
+margin_bottom = 269.0
+rect_scale = Vector2( 7.27966, 1.08932 )
+flat = true
+
+[node name="Horsehoe Cottage2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 355, 199 )
+scale = Vector2( 0.159814, 0.159814 )
+texture = ExtResource( 11 )
+
+[node name="Cottage at junction with burnt mill road" type="Button" parent="."]
+margin_left = 375.0
+margin_top = 192.0
+margin_right = 387.0
+margin_bottom = 212.0
+rect_scale = Vector2( 7.27966, 1.08932 )
+flat = true
+
+[node name="Cottage at junction with burnt mill road2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 425, 146 )
+scale = Vector2( 0.159814, 0.159814 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0.341176, 0.341176, 0.341176, 1 )
+position = Vector2( 514, 433 )
+scale = Vector2( 1.1871, 0.00598873 )
+texture = ExtResource( 7 )
+
+[node name="coin" parent="." instance=ExtResource( 8 )]
+position = Vector2( 62, 65.0003 )
+scale = Vector2( 0.670548, 0.573838 )
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 90.0
+margin_top = 51.0
+margin_right = 130.0
+margin_bottom = 74.0
+rect_scale = Vector2( 1.30504, 1.30504 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "X 7"
+
+[node name="Sprite4" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.737255 )
+position = Vector2( 533, 490 )
+texture = ExtResource( 14 )
+
+[node name="LoadingLevel1" type="Control" parent="."]
+margin_right = 31.0
+margin_bottom = 81.0
+script = ExtResource( 15 )
+
+[node name="ProgressBar" type="ProgressBar" parent="LoadingLevel1"]
+visible = false
+margin_left = 323.0
+margin_top = 436.0
+margin_right = 704.0
+margin_bottom = 454.0
+rect_scale = Vector2( 0.999343, 0.703125 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="LoadingLevel1"]
+visible = false
+margin_left = 330.0
+margin_top = 434.0
+margin_right = 412.0
+margin_bottom = 457.0
+rect_scale = Vector2( 1.02422, 0.715304 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "loading........."
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="LoadingLevel1" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="Benfleet Hall" to="." method="_on_Benfleet_Hall_mouse_entered"]
+[connection signal="mouse_exited" from="Benfleet Hall" to="." method="_on_Benfleet_Hall_mouse_exited"]
+[connection signal="pressed" from="Benfleet Hall" to="." method="_on_Benfleet_Hall_pressed"]
+[connection signal="mouse_entered" from="Ruins" to="." method="_on_Ruins_mouse_entered"]
+[connection signal="pressed" from="Ruins" to="." method="_on_Ruins_pressed"]
+[connection signal="pressed" from="Harrow Bar" to="." method="_on_Harrow_Bar_pressed"]
+[connection signal="pressed" from="All Saint Church" to="." method="_on_All_Saint_Church_pressed"]
+[connection signal="pressed" from="Fish Pond" to="." method="_on_Fish_Pond_pressed"]
+[connection signal="pressed" from="Horsehoe Cottage" to="." method="_on_Horsehoe_Cottage_pressed"]
+[connection signal="pressed" from="Cottage at junction with burnt mill road" to="." method="_on_Cottage_at_junction_with_burnt_mill_road_pressed"]

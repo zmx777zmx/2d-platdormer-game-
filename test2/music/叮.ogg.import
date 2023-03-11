@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/叮.ogg-b7b96ce958d5efe402ffa46ebeb00279.oggstr"
+
+[deps]
+
+source_file="res://music/叮.ogg"
+dest_files=[ "res://.import/叮.ogg-b7b96ce958d5efe402ffa46ebeb00279.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

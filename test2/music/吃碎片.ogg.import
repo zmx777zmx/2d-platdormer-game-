@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/吃碎片.ogg-fb0b5f0f4bda0dc32a68359d942d7f62.oggstr"
+
+[deps]
+
+source_file="res://music/吃碎片.ogg"
+dest_files=[ "res://.import/吃碎片.ogg-fb0b5f0f4bda0dc32a68359d942d7f62.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

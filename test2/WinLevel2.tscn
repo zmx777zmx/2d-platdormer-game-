@@ -1,0 +1,186 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=1]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WinLevel2.gd" type="Script" id=3]
+[ext_resource path="res://images/码.png" type="Texture" id=4]
+[ext_resource path="res://images/Mission Church code.png" type="Texture" id=5]
+[ext_resource path="res://images/zone3-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://images/story intro cover.png" type="Texture" id=7]
+[ext_resource path="res://gamescene/ProgressBarWin.tres" type="Theme" id=8]
+[ext_resource path="res://images/WinLevel2.png" type="Texture" id=9]
+[ext_resource path="res://LoadingWin2.gd" type="Script" id=10]
+[ext_resource path="res://images/WIN.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.945098, 0.956863, 0.882353, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.886275, 0.886275, 0.886275, 0.592157 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.658824, 0.74902, 0.678431, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color( 1, 0.905882, 0.658824, 0.94902 )
+shadow_size = 1
+
+[node name="WinLevel2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 33.0
+margin_bottom = 20.0
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 391.0
+margin_top = 402.0
+margin_right = 632.0
+margin_bottom = 425.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Click the label to explore offline activities?"
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 791.0
+margin_top = 398.0
+margin_right = 831.0
+margin_bottom = 438.0
+rect_scale = Vector2( 4.90936, 3.99601 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.6 )
+margin_left = 737.0
+margin_top = 357.0
+margin_right = 6392.0
+margin_bottom = 4162.0
+rect_scale = Vector2( 0.0588414, 0.0626272 )
+theme = ExtResource( 1 )
+text = " next level"
+flat = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 797.0
+margin_top = 355.0
+margin_right = 918.0
+margin_bottom = 378.0
+rect_scale = Vector2( 1.5181, 1.43275 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Next Level - Zone 3"
+
+[node name="Zone3-removebg-preview" type="Sprite" parent="."]
+position = Vector2( 904, 480 )
+scale = Vector2( 0.638414, 0.631017 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 548, 243 )
+scale = Vector2( 0.248451, 0.248451 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0.341176, 0.341176, 0.341176, 1 )
+position = Vector2( 514, 433 )
+scale = Vector2( 1.1871, 0.00598873 )
+texture = ExtResource( 7 )
+
+[node name="coin" parent="." instance=ExtResource( 2 )]
+position = Vector2( 62, 65.0003 )
+scale = Vector2( 0.670548, 0.573838 )
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 87.0
+margin_top = 50.0
+margin_right = 127.0
+margin_bottom = 73.0
+rect_scale = Vector2( 1.30504, 1.30504 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "X 3"
+
+[node name="Sprite4" type="Sprite" parent="."]
+modulate = Color( 1, 0.760784, 1, 0.815686 )
+position = Vector2( 517, 504 )
+texture = ExtResource( 13 )
+
+[node name="farmhouse" type="Button" parent="."]
+margin_left = 502.0
+margin_top = 122.0
+margin_right = 514.0
+margin_bottom = 142.0
+rect_scale = Vector2( 7.72068, 1.19699 )
+flat = true
+
+[node name="farmhouse2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 545, 72 )
+scale = Vector2( 0.165093, 0.165093 )
+texture = ExtResource( 4 )
+
+[node name="Bradfield" type="Button" parent="."]
+margin_left = 356.0
+margin_top = 155.0
+margin_right = 368.0
+margin_bottom = 175.0
+rect_scale = Vector2( 7.36529, 1.05873 )
+flat = true
+
+[node name="Bradfield2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 400, 99 )
+scale = Vector2( 0.165908, 0.168655 )
+texture = ExtResource( 4 )
+
+[node name="MissionChurch" type="Button" parent="."]
+margin_left = 664.0
+margin_top = 186.0
+margin_right = 676.0
+margin_bottom = 206.0
+rect_scale = Vector2( 5.19477, 1.15931 )
+flat = true
+
+[node name="MisssionChurch" type="Sprite" parent="."]
+visible = false
+position = Vector2( 696, 121 )
+scale = Vector2( 0.252865, 0.249935 )
+texture = ExtResource( 5 )
+
+[node name="LoadingWin2" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 10 )
+
+[node name="ProgressBar" type="ProgressBar" parent="LoadingWin2"]
+visible = false
+margin_left = 325.0
+margin_top = 437.0
+margin_right = 704.0
+margin_bottom = 455.0
+rect_scale = Vector2( 1.00332, 0.931976 )
+theme = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="LoadingWin2"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="LoadingWin2" method="_on_Button_pressed"]
+[connection signal="pressed" from="farmhouse" to="." method="_on_farmhouse_pressed"]
+[connection signal="pressed" from="Bradfield" to="." method="_on_Bradfield_pressed"]
+[connection signal="pressed" from="MissionChurch" to="." method="_on_MissionChurch_pressed"]

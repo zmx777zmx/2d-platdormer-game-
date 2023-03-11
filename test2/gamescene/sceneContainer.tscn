@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=2]
+[ext_resource path="res://gamescene/sceneContainer.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=7]
+
+[sub_resource type="AtlasTexture" id=8]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+margin_left = 1.0
+margin_top = 5.0
+margin_right = 134.0
+margin_bottom = 139.0
+rect_scale = Vector2( 1.60711, 1.2663 )
+theme = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 133.0
+margin_bottom = 23.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-2"
+align = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_top = 27.0
+margin_right = 133.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 70, 80 )
+texture_normal = SubResource( 7 )
+texture_focused = SubResource( 8 )
+
+[node name="Panel" type="Panel" parent="TextureButton"]
+modulate = Color( 0.427451, 1, 1, 0.682353 )
+show_behind_parent = true
+margin_left = 4.0
+margin_top = -5.0
+margin_right = 116.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 50, 80 )
+rect_scale = Vector2( 1.08658, 1.07253 )
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 111.0
+margin_right = 133.0
+margin_bottom = 134.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fish Pond"
+align = 1
+
+[connection signal="focus_entered" from="TextureButton" to="." method="_on_TextureButton_focus_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/铁匠在铁砧上工作_ 锤子_ 铁砧.ogg-436aa368038fb4ea29caf51cb846a782.oggstr"
+
+[deps]
+
+source_file="res://music/铁匠在铁砧上工作_ 锤子_ 铁砧.ogg"
+dest_files=[ "res://.import/铁匠在铁砧上工作_ 锤子_ 铁砧.ogg-436aa368038fb4ea29caf51cb846a782.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

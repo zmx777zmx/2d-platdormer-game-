@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/木材在火炉里燃烧_爱给网_aigei_com.ogg-2798456b4d1dc1142ea1f29926b60dbf.oggstr"
+
+[deps]
+
+source_file="res://music/木材在火炉里燃烧_爱给网_aigei_com.ogg"
+dest_files=[ "res://.import/木材在火炉里燃烧_爱给网_aigei_com.ogg-2798456b4d1dc1142ea1f29926b60dbf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

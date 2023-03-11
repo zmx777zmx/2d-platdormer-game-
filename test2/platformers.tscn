@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://images/level4 ramp.png" type="Texture" id=2]
+[ext_resource path="res://images/story intro cover.png" type="Texture" id=3]
+[ext_resource path="res://images/light test.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37, 5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 14.5, 5 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 136, 464, 184, 464, 184, 472, 136, 472 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = 56.0
+margin_right = -8.0
+margin_bottom = 56.0
+color = Color( 0.435294, 0.384314, 0.384314, 1 )
+
+[node name="platformer1" type="Node2D" parent="."]
+
+[node name="intro2" type="Sprite" parent="platformer1"]
+visible = false
+position = Vector2( 576, 424 )
+scale = Vector2( 1.04736, 1.16307 )
+texture = ExtResource( 2 )
+
+[node name="Light1" type="Light2D" parent="platformer1"]
+modulate = Color( 0.941176, 0.313726, 0.313726, 1 )
+position = Vector2( 384, 536 )
+rotation = -0.00775357
+scale = Vector2( 0.298432, 0.194543 )
+texture = ExtResource( 5 )
+color = Color( 0.431373, 0.796078, 0.803922, 1 )
+range_height = -1028.1
+shadow_enabled = true
+shadow_color = Color( 0.639216, 0.768627, 0.607843, 0 )
+
+[node name="Light2D" type="Light2D" parent="platformer1"]
+
+[node name="Area2D" type="Area2D" parent="platformer1"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="platformer1/Area2D"]
+position = Vector2( 176, 568 )
+scale = Vector2( -0.818414, 4.51265 )
+shape = SubResource( 1 )
+
+[node name="P1" type="Area2D" parent="platformer1"]
+position = Vector2( 0, 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platformer1/P1"]
+position = Vector2( 385.5, 515 )
+shape = SubResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D"]
+position = Vector2( 224, 60 )
+occluder = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0.223529 )
+position = Vector2( 384, 528 )
+scale = Vector2( 0.152736, 0.0256915 )
+texture = ExtResource( 3 )

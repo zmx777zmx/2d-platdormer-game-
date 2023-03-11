@@ -1,0 +1,79 @@
+{
+	"files": [
+
+	],
+	"folders": {
+		"Characters": {
+			"files": [
+				"character-1657221868.json",
+				"character-1657221878.json",
+				"character-1660502085.json"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Definitions": {
+			"files": [
+
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Themes": {
+			"files": [
+				"default-theme.cfg",
+				"theme-1657221975.cfg",
+				"theme-1660487323.cfg"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		},
+		"Timelines": {
+			"files": [
+				"timeline-1657221817.json",
+				"timeline-1657274641.json",
+				"timeline-1658058035.json",
+				"timeline-1658075889.json",
+				"timeline-1658365313.json",
+				"timeline-1658394613.json",
+				"timeline-1658697403.json",
+				"timeline-1659398766.json",
+				"timeline-1659440568.json",
+				"timeline-1659440645.json",
+				"timeline-1659524606.json",
+				"timeline-1659525690.json",
+				"timeline-1665427095.json",
+				"timeline-1665427863.json",
+				"timeline-1665427886.json",
+				"timeline-1665441106.json",
+				"timeline-1665442843.json",
+				"timeline-1665442978.json",
+				"timeline-1666198584.json",
+				"timeline-1666200006.json",
+				"timeline-1666203922.json"
+			],
+			"folders": {
+
+			},
+			"metadata": {
+				"color": null,
+				"folded": false
+			}
+		}
+	}
+}

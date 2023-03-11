@@ -1,0 +1,1278 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://images/game map bg.jpg" type="Texture" id=1]
+[ext_resource path="res://images/real map.jpg" type="Texture" id=2]
+[ext_resource path="res://images/site location.png" type="Texture" id=3]
+[ext_resource path="res://images/z07.jpg" type="Texture" id=4]
+[ext_resource path="res://game map.gd" type="Script" id=5]
+[ext_resource path="res://gamescene/UI-GameScene.tres" type="Theme" id=6]
+[ext_resource path="res://music/任务完成.ogg" type="AudioStream" id=7]
+[ext_resource path="res://images/zone1-removebg-preview.png" type="Texture" id=8]
+[ext_resource path="res://images/game icon scope/icon1.png" type="Texture" id=9]
+[ext_resource path="res://images/game icon scope/icon2.png" type="Texture" id=10]
+[ext_resource path="res://images/game icon scope/icon4.png" type="Texture" id=11]
+[ext_resource path="res://images/game icon scope/icon5.png" type="Texture" id=12]
+[ext_resource path="res://images/game icon scope/icon6.png" type="Texture" id=13]
+[ext_resource path="res://images/game icon scope/icon3.png" type="Texture" id=14]
+[ext_resource path="res://gamescene/sceneContainer.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ScrollContainer.gd" type="Script" id=16]
+[ext_resource path="res://images/z06.jpg" type="Texture" id=17]
+[ext_resource path="res://images/zone1 line.png" type="Texture" id=18]
+[ext_resource path="res://images/zone2-removebg-preview.png" type="Texture" id=19]
+[ext_resource path="res://images/zone2 line.png" type="Texture" id=20]
+[ext_resource path="res://images/zone3-removebg-preview.png" type="Texture" id=21]
+[ext_resource path="res://images/zone3 line.png" type="Texture" id=22]
+[ext_resource path="res://images/z05.jpg" type="Texture" id=23]
+[ext_resource path="res://images/z01.jpg" type="Texture" id=24]
+[ext_resource path="res://images/zone4-removebg-preview.png" type="Texture" id=25]
+[ext_resource path="res://images/z02.jpg" type="Texture" id=26]
+[ext_resource path="res://images/zone5.png" type="Texture" id=27]
+[ext_resource path="res://images/zone6 line.png" type="Texture" id=28]
+[ext_resource path="res://images/zone4 line.png" type="Texture" id=29]
+[ext_resource path="res://images/zone6.png" type="Texture" id=30]
+[ext_resource path="res://images/z03.jpg" type="Texture" id=31]
+[ext_resource path="res://images/zone7 line.png" type="Texture" id=32]
+[ext_resource path="res://images/gamescene1.jpg" type="Texture" id=33]
+[ext_resource path="res://images/gamescene2.jpg" type="Texture" id=34]
+[ext_resource path="res://images/gamescene3.jpg" type="Texture" id=35]
+[ext_resource path="res://music/a starry sky 1.28.MP4.ogg" type="AudioStream" id=36]
+[ext_resource path="res://music/游戏气泡.ogg" type="AudioStream" id=37]
+[ext_resource path="res://images/游戏背景level5.jpg" type="Texture" id=38]
+[ext_resource path="res://images/level4 bg.jpg" type="Texture" id=39]
+[ext_resource path="res://images/sorry.png" type="Texture" id=40]
+[ext_resource path="res://images/level 6 bg.jpg" type="Texture" id=41]
+[ext_resource path="res://zone1-pargressbar.gd" type="Script" id=42]
+[ext_resource path="res://zone2-progressbar.gd" type="Script" id=43]
+[ext_resource path="res://zone3-progressbar.gd" type="Script" id=44]
+[ext_resource path="res://zone4-progressbar.gd" type="Script" id=45]
+[ext_resource path="res://zone6-progressbar.gd" type="Script" id=46]
+[ext_resource path="res://zone7-progressbar.gd" type="Script" id=47]
+[ext_resource path="res://gamescene/game map.tres" type="Theme" id=48]
+[ext_resource path="res://images/0SITE LOCATION0.png" type="Texture" id=49]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 1, 1, 1, 0.568627 )
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0, 0.484127, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 0.868143, 0.683544, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=15]
+gradient = SubResource( 13 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.972549, 0.972549, 0.937255, 0.635294 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 1, 1, 1, 0.568627 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 1, 1, 1, 0.568627 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.945098, 0.913725, 0.752941, 0.811765 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.556863, 0.670588, 0.427451, 0.968627 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.929412, 0.937255, 0.666667, 1 )
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+corner_detail = 10
+
+[node name="GameMap" type="Control"]
+margin_right = 1025.0
+margin_bottom = 621.0
+rect_scale = Vector2( 1.0637, 0.954169 )
+script = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -5.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( -351, 20 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 15.0
+margin_bottom = -1.0
+texture = ExtResource( 1 )
+
+[node name="press" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = -3.0
+
+[node name="du2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 7.76897e-06, 0 )
+stream = ExtResource( 37 )
+volume_db = -10.0
+
+[node name="RealMap2" type="Button" parent="."]
+margin_left = 313.0
+margin_top = 480.0
+margin_right = 325.0
+margin_bottom = 500.0
+rect_scale = Vector2( 11.8303, 6.80144 )
+flat = true
+
+[node name="RealMap" type="Sprite" parent="."]
+visible = false
+position = Vector2( 740, 333 )
+scale = Vector2( 0.25811, 0.25811 )
+texture = ExtResource( 2 )
+
+[node name="SiteLocation" type="Button" parent="."]
+margin_left = 304.0
+margin_top = 425.0
+margin_right = 316.0
+margin_bottom = 445.0
+rect_scale = Vector2( 2.78936, 1.5741 )
+flat = true
+
+[node name="SiteLocation2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 510, 326 )
+scale = Vector2( 0.154424, 0.147284 )
+texture = ExtResource( 3 )
+
+[node name="locations" type="Sprite" parent="."]
+visible = false
+position = Vector2( 758.336, 333.773 )
+scale = Vector2( 0.161671, 0.161671 )
+texture = ExtResource( 49 )
+
+[node name="Zone1" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 109.0
+margin_top = -33.0
+margin_right = 1432.0
+margin_bottom = 1116.0
+rect_scale = Vector2( 0.301638, 0.297536 )
+icon = ExtResource( 24 )
+flat = true
+
+[node name="Zone2" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 115.0
+margin_top = 73.0
+margin_right = 568.0
+margin_bottom = 556.0
+rect_scale = Vector2( 0.318266, 0.301298 )
+icon = ExtResource( 26 )
+flat = true
+
+[node name="Zone3" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 108.0
+margin_top = 165.0
+margin_right = 632.0
+margin_bottom = 648.0
+rect_scale = Vector2( 0.29852, 0.29852 )
+icon = ExtResource( 31 )
+flat = true
+
+[node name="Zone4" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 109.0
+margin_top = 235.0
+margin_right = 633.0
+margin_bottom = 555.0
+rect_scale = Vector2( 0.299412, 0.286863 )
+icon = ExtResource( 23 )
+flat = true
+
+[node name="Zone7" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 34.0
+margin_top = 295.0
+margin_right = 828.0
+margin_bottom = 1434.0
+rect_scale = Vector2( 0.294027, 0.294027 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="Zone6" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 100.0
+margin_top = 308.0
+margin_right = 632.0
+margin_bottom = 848.0
+rect_scale = Vector2( 0.298, 0.292838 )
+icon = ExtResource( 17 )
+flat = true
+
+[node name="Zone_1" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Zone_1"]
+position = Vector2( 268.83, 121.593 )
+scale = Vector2( 0.693624, 0.677764 )
+texture = ExtResource( 18 )
+
+[node name="GameScenes" type="Panel" parent="Zone_1"]
+visible = false
+margin_left = 483.0
+margin_top = 336.0
+margin_right = 524.0
+margin_bottom = 376.0
+rect_scale = Vector2( 12.4012, 6.48945 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 14 )
+
+[node name="Background" type="NinePatchRect" parent="Zone_1/GameScenes"]
+margin_right = 41.0
+margin_bottom = 40.0
+texture = SubResource( 15 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Zone_1/GameScenes/Background"]
+margin_left = 27.0
+margin_top = -1.0
+margin_right = 154.0
+margin_bottom = 136.0
+rect_scale = Vector2( 0.109945, 0.298046 )
+rect_clip_content = false
+mouse_filter = 1
+scroll_vertical_enabled = false
+script = ExtResource( 16 )
+scene_current_scale = 1.5
+scroll_duration = 0.1
+
+[node name="CenterContainer" type="CenterContainer" parent="Zone_1/GameScenes/Background/ScrollContainer"]
+margin_right = 666.0
+margin_bottom = 137.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer"]
+margin_top = 6.0
+margin_right = 666.0
+margin_bottom = 131.0
+mouse_filter = 2
+custom_constants/margin_right = 208
+custom_constants/margin_left = 33
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer"]
+margin_left = 33.0
+margin_right = 458.0
+margin_bottom = 125.0
+mouse_filter = 2
+custom_constants/separation = 1
+
+[node name="sceneContainer2" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 70.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 30, 0 )
+rect_scale = Vector2( 1, 1 )
+theme = null
+
+[node name="sceneContainer3" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 71.0
+margin_top = 0.0
+margin_right = 141.0
+margin_bottom = 125.0
+rect_scale = Vector2( 1, 1 )
+theme = null
+
+[node name="sceneContainer4" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 142.0
+margin_top = 0.0
+margin_right = 212.0
+margin_bottom = 125.0
+rect_scale = Vector2( 1, 1 )
+theme = null
+
+[node name="sceneContainer5" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 213.0
+margin_top = 0.0
+margin_right = 283.0
+margin_bottom = 125.0
+rect_scale = Vector2( 1, 1 )
+theme = null
+
+[node name="sceneContainer6" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 284.0
+margin_top = 0.0
+margin_right = 354.0
+margin_bottom = 125.0
+rect_scale = Vector2( 1, 1 )
+theme = null
+
+[node name="sceneContainer7" parent="Zone_1/GameScenes/Background/ScrollContainer/CenterContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 355.0
+margin_top = 0.0
+margin_right = 425.0
+margin_bottom = 125.0
+rect_scale = Vector2( 1, 1 )
+theme = null
+
+[node name="3dMapShow" type="Panel" parent="Zone_1"]
+margin_left = 527.0
+margin_top = 36.0
+margin_right = 564.0
+margin_bottom = 76.0
+rect_scale = Vector2( 12.4352, 6.49049 )
+custom_styles/panel = SubResource( 14 )
+
+[node name="Zone2" type="Sprite" parent="Zone_1/3dMapShow"]
+position = Vector2( 19.0364, 21.1698 )
+scale = Vector2( 0.051349, 0.11862 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Zone_1/3dMapShow"]
+visible = false
+modulate = Color( 0.376471, 0.196078, 0.196078, 1 )
+margin_left = -0.321686
+margin_top = 41.7534
+margin_right = 98.6783
+margin_bottom = 64.7534
+rect_scale = Vector2( 0.0844915, 0.221368 )
+theme = ExtResource( 6 )
+text = "Area Selections"
+
+[node name="Node2D" type="Node2D" parent="Zone_1"]
+
+[node name="gamelevelicon" type="AnimatedSprite" parent="Zone_1/Node2D"]
+position = Vector2( 800, 125 )
+scale = Vector2( 0.0806075, 0.0806075 )
+frames = SubResource( 16 )
+frame = 9
+speed_scale = 0.5
+playing = true
+
+[node name="gamelevelicon3" type="AnimatedSprite" parent="Zone_1/Node2D"]
+position = Vector2( 723, 178 )
+scale = Vector2( 0.0806075, 0.0806075 )
+frames = SubResource( 16 )
+frame = 9
+speed_scale = 0.5
+playing = true
+
+[node name="gamelevelicon4" type="AnimatedSprite" parent="Zone_1/Node2D"]
+position = Vector2( 757, 200 )
+scale = Vector2( 0.0806075, 0.0806075 )
+frames = SubResource( 16 )
+frame = 8
+speed_scale = 0.8
+playing = true
+
+[node name="gamelevelicon5" type="AnimatedSprite" parent="Zone_1/Node2D"]
+position = Vector2( 782, 199 )
+scale = Vector2( 0.0806075, 0.0806075 )
+frames = SubResource( 16 )
+frame = 6
+speed_scale = 0.5
+playing = true
+
+[node name="gamelevelicon6" type="AnimatedSprite" parent="Zone_1/Node2D"]
+position = Vector2( 804, 214 )
+scale = Vector2( 0.0806075, 0.0806075 )
+frames = SubResource( 16 )
+frame = 4
+speed_scale = 0.5
+playing = true
+
+[node name="gamelevelicon2" type="AnimatedSprite" parent="Zone_1/Node2D"]
+position = Vector2( 849, 153 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 8
+speed_scale = 0.9
+playing = true
+
+[node name="title" type="Label" parent="Zone_1/Node2D"]
+margin_left = 516.0
+margin_top = 21.0
+margin_right = 582.0
+margin_bottom = 44.0
+rect_rotation = 90.0
+rect_scale = Vector2( 1.16782, 1.16782 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "--- Zone 1"
+
+[node name="description" type="Label" parent="Zone_1/Node2D"]
+margin_left = 534.0
+margin_top = 44.0
+margin_right = 931.0
+margin_bottom = 93.0
+rect_scale = Vector2( 0.7, 0.7 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Zone 1 of the site is covered in reminders of the  time of the conflict,
+ with  numerous areas occasionally undergoing renovation."
+
+[node name="Label3" type="Label" parent="Zone_1/Node2D"]
+margin_left = 853.331
+margin_top = 113.134
+margin_right = 907.331
+margin_bottom = 136.134
+rect_scale = Vector2( 0.583429, 0.583429 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-1"
+
+[node name="Label4" type="Label" parent="Zone_1/Node2D"]
+margin_left = 778.995
+margin_top = 91.9878
+margin_right = 834.995
+margin_bottom = 114.988
+rect_scale = Vector2( 0.541964, 0.536595 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-2"
+
+[node name="Label5" type="Label" parent="Zone_1/Node2D"]
+margin_left = 711.788
+margin_top = 144.854
+margin_right = 767.788
+margin_bottom = 167.854
+rect_scale = Vector2( 0.531051, 0.570285 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-3"
+
+[node name="Label6" type="Label" parent="Zone_1/Node2D"]
+margin_left = 743.355
+margin_top = 159.657
+margin_right = 799.355
+margin_bottom = 182.657
+rect_scale = Vector2( 0.549788, 0.647407 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-4"
+
+[node name="Label8" type="Label" parent="Zone_1/Node2D"]
+margin_left = 774.922
+margin_top = 160.714
+margin_right = 830.922
+margin_bottom = 183.714
+rect_scale = Vector2( 0.549723, 0.57615 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-5"
+
+[node name="Label7" type="Label" parent="Zone_1/Node2D"]
+margin_left = 807.508
+margin_top = 182.918
+margin_right = 863.508
+margin_bottom = 205.918
+rect_scale = Vector2( 0.520306, 0.594075 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level 1-6"
+
+[node name="Panel" type="Panel" parent="Zone_1"]
+margin_left = 529.0
+margin_top = 323.0
+margin_right = 569.0
+margin_bottom = 363.0
+rect_scale = Vector2( 11.5301, 8.05734 )
+custom_styles/panel = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Zone_1/Panel"]
+position = Vector2( 20.1651, 19.8268 )
+scale = Vector2( 0.0318356, 0.0373619 )
+texture = ExtResource( 33 )
+
+[node name="Label" type="Label" parent="Zone_1"]
+margin_left = 806.489
+margin_top = 296.053
+margin_right = 988.489
+margin_bottom = 319.053
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Scene ---  leve 1 (1- 6)"
+
+[node name="du" type="AudioStreamPlayer2D" parent="Zone_1"]
+stream = ExtResource( 37 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Zone_1"]
+
+[node name="Zone_2" type="Node2D" parent="."]
+visible = false
+scale = Vector2( 1, 0.997298 )
+
+[node name="title2" type="Label" parent="Zone_2"]
+margin_left = 516.0
+margin_top = 21.0
+margin_right = 582.0
+margin_bottom = 44.0
+rect_rotation = 90.0
+rect_scale = Vector2( 1.16782, 1.16782 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "--- Zone 2"
+
+[node name="Sprite" type="Sprite" parent="Zone_2"]
+position = Vector2( 162, 163 )
+scale = Vector2( 0.300635, 0.293761 )
+texture = ExtResource( 20 )
+
+[node name="MapShow" type="Panel" parent="Zone_2"]
+margin_left = 529.0
+margin_top = 32.0
+margin_right = 566.0
+margin_bottom = 72.0
+rect_scale = Vector2( 12.4352, 6.49049 )
+custom_styles/panel = SubResource( 17 )
+
+[node name="Zone2" type="Sprite" parent="Zone_2/MapShow"]
+position = Vector2( 25.9814, 20.4764 )
+scale = Vector2( 0.0541022, 0.126596 )
+texture = ExtResource( 19 )
+
+[node name="Label1" type="Sprite" parent="Zone_2"]
+position = Vector2( 866.062, 80.9014 )
+scale = Vector2( 0.15323, 0.0805084 )
+
+[node name="Label2" type="Sprite" parent="Zone_2"]
+position = Vector2( 759.063, 120.901 )
+scale = Vector2( 0.169074, 0.0786664 )
+
+[node name="Label3" type="Sprite" parent="Zone_2"]
+position = Vector2( 945.063, 134.901 )
+scale = Vector2( 0.101333, 0.101333 )
+
+[node name="gamelevelicon7" type="AnimatedSprite" parent="Zone_2"]
+position = Vector2( 934.78, 169.173 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 7
+speed_scale = 0.9
+playing = true
+
+[node name="gamelevelicon8" type="AnimatedSprite" parent="Zone_2"]
+position = Vector2( 768.798, 144.854 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 7
+speed_scale = 0.9
+playing = true
+
+[node name="gamelevelicon9" type="AnimatedSprite" parent="Zone_2"]
+position = Vector2( 846.188, 116.306 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 6
+speed_scale = 0.9
+playing = true
+
+[node name="Label" type="Label" parent="Zone_2"]
+margin_left = 923.063
+margin_top = 125.901
+margin_right = 1007.06
+margin_bottom = 148.901
+rect_scale = Vector2( 0.507359, 0.610828 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Mission Church"
+
+[node name="Label4" type="Label" parent="Zone_2"]
+margin_left = 832.062
+margin_top = 73.9014
+margin_right = 983.062
+margin_bottom = 96.9014
+rect_scale = Vector2( 0.427474, 0.502363 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TIFFAYNE'S FARMHOUSE"
+
+[node name="Label5" type="Label" parent="Zone_2"]
+margin_left = 725.062
+margin_top = 112.901
+margin_right = 845.062
+margin_bottom = 135.901
+rect_scale = Vector2( 0.559926, 0.588024 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bradfield's Farmhouse"
+
+[node name="Panel2" type="Panel" parent="Zone_2"]
+margin_left = 529.0
+margin_top = 362.0
+margin_right = 569.0
+margin_bottom = 380.0
+rect_scale = Vector2( 11.5301, 8.05734 )
+custom_styles/panel = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Zone_2/Panel2"]
+position = Vector2( 20.0342, 9.34891 )
+scale = Vector2( 0.00731048, 0.014909 )
+texture = ExtResource( 34 )
+
+[node name="Label6" type="Label" parent="Zone_2"]
+margin_left = 528.0
+margin_top = 338.0
+margin_right = 595.0
+margin_bottom = 361.0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Scene --- level 2( 1-3)"
+
+[node name="Label7" type="Label" parent="Zone_2"]
+margin_left = 543.769
+margin_top = 41.2359
+margin_right = 788.769
+margin_bottom = 142.236
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "In the second level, the sites all retain the protected 
+buildings of the region,and the 
+all have the unique historical
+background of the region."
+
+[node name="Zone_3" type="Node2D" parent="."]
+visible = false
+
+[node name="title2" type="Label" parent="Zone_3"]
+margin_left = 516.0
+margin_top = 21.0
+margin_right = 582.0
+margin_bottom = 44.0
+rect_rotation = 90.0
+rect_scale = Vector2( 1.16782, 1.16782 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "--- Zone 3"
+
+[node name="Sprite" type="Sprite" parent="Zone_3"]
+position = Vector2( 187, 242 )
+scale = Vector2( 0.684542, 0.66889 )
+texture = ExtResource( 22 )
+
+[node name="MapShow" type="Panel" parent="Zone_3"]
+margin_left = 528.0
+margin_top = 30.0
+margin_right = 565.0
+margin_bottom = 70.0
+rect_scale = Vector2( 12.4352, 6.49049 )
+custom_styles/panel = SubResource( 18 )
+
+[node name="Zone2" type="Sprite" parent="Zone_3/MapShow"]
+position = Vector2( 25.5313, 20.6626 )
+scale = Vector2( 0.0643287, 0.161318 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="Zone_3/MapShow"]
+visible = false
+modulate = Color( 0.376471, 0.196078, 0.196078, 1 )
+margin_left = 16.6746
+margin_top = -4.0225
+margin_right = 104.675
+margin_bottom = 9.9775
+rect_scale = Vector2( 0.0844915, 0.221368 )
+text = "Area Selections"
+
+[node name="Label6" type="Sprite" parent="Zone_3/MapShow"]
+position = Vector2( 22.9526, 9.56927 )
+scale = Vector2( 0.012765, 0.0232469 )
+
+[node name="Label" type="Label" parent="Zone_3"]
+margin_left = 783.424
+margin_top = 77.1092
+margin_right = 843.424
+margin_bottom = 100.109
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pond Lane"
+
+[node name="gamelevelicon10" type="AnimatedSprite" parent="Zone_3"]
+position = Vector2( 819.667, 124.408 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 6
+speed_scale = 0.9
+playing = true
+
+[node name="Panel3" type="Panel" parent="Zone_3"]
+margin_left = 531.0
+margin_top = 348.0
+margin_right = 571.0
+margin_bottom = 359.0
+rect_scale = Vector2( 11.5196, 15.9968 )
+custom_styles/panel = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Zone_3/Panel3"]
+position = Vector2( 19.8794, 5.56372 )
+scale = Vector2( 0.0146239, 0.0126939 )
+texture = ExtResource( 35 )
+
+[node name="Label7" type="Label" parent="Zone_3"]
+margin_left = 530.0
+margin_top = 324.0
+margin_right = 597.0
+margin_bottom = 347.0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Scenes --- level3 (1)"
+
+[node name="Label2" type="Label" parent="Zone_3"]
+margin_left = 540.714
+margin_top = 43.3506
+margin_right = 799.714
+margin_bottom = 118.351
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "In level 3, which only contains the main roads
+ in the area, serves as a persistent 
+memory of the local residents."
+
+[node name="Zone_4" type="Node2D" parent="."]
+visible = false
+
+[node name="title2" type="Label" parent="Zone_4"]
+margin_left = 516.0
+margin_top = 21.0
+margin_right = 582.0
+margin_bottom = 44.0
+rect_rotation = 90.0
+rect_scale = Vector2( 1.16782, 1.16782 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "--- Zone 4"
+
+[node name="Sprite" type="Sprite" parent="Zone_4"]
+position = Vector2( 200, 278 )
+scale = Vector2( 0.300635, 0.293761 )
+texture = ExtResource( 29 )
+
+[node name="MapShow" type="Panel" parent="Zone_4"]
+margin_left = 527.0
+margin_top = 32.0
+margin_right = 564.0
+margin_bottom = 72.0
+rect_scale = Vector2( 12.4352, 6.49049 )
+custom_styles/panel = SubResource( 18 )
+
+[node name="Zone2" type="Sprite" parent="Zone_4/MapShow"]
+position = Vector2( 25.4233, 21.2974 )
+scale = Vector2( 0.07174, 0.179903 )
+texture = ExtResource( 25 )
+
+[node name="Label7" type="Sprite" parent="Zone_4"]
+position = Vector2( 898.974, 61.2644 )
+scale = Vector2( 0.32101, 0.105661 )
+
+[node name="Label8" type="Sprite" parent="Zone_4"]
+position = Vector2( 850.974, 157.264 )
+scale = Vector2( 0.158735, 0.150884 )
+
+[node name="Label" type="Label" parent="Zone_4"]
+margin_left = 835.974
+margin_top = 51.2644
+margin_right = 1025.97
+margin_bottom = 74.2644
+rect_scale = Vector2( 0.686263, 0.647445 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SADDLERS' HALL FARMHOUSE"
+
+[node name="Label2" type="Label" parent="Zone_4"]
+margin_left = 815.974
+margin_top = 143.264
+margin_right = 895.974
+margin_bottom = 166.264
+rect_scale = Vector2( 0.827104, 1.16307 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Primary school"
+
+[node name="gamelevelicon11" type="AnimatedSprite" parent="Zone_4"]
+position = Vector2( 902.414, 102.71 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 6
+speed_scale = 0.9
+playing = true
+
+[node name="gamelevelicon12" type="AnimatedSprite" parent="Zone_4"]
+position = Vector2( 849.463, 188.354 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 5
+speed_scale = 0.9
+playing = true
+
+[node name="Panel4" type="Panel" parent="Zone_4"]
+margin_left = 531.0
+margin_top = 348.0
+margin_right = 571.0
+margin_bottom = 361.0
+rect_scale = Vector2( 11.5196, 15.9968 )
+custom_styles/panel = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Zone_4/Panel4"]
+position = Vector2( 19.6719, 6.27051 )
+scale = Vector2( 0.00581307, 0.00528798 )
+texture = ExtResource( 39 )
+
+[node name="Label9" type="Label" parent="Zone_4"]
+margin_left = 530.0
+margin_top = 324.0
+margin_right = 688.0
+margin_bottom = 347.0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Scene --- level4 (1-2)"
+
+[node name="Label3" type="Label" parent="Zone_4"]
+margin_left = 547.0
+margin_top = 39.0
+margin_right = 762.0
+margin_bottom = 114.0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "In the fourth level, the site buildings 
+are not completely preserved, and the
+ regional memory gradually disappears."
+
+[node name="Zone_7" type="Node2D" parent="."]
+visible = false
+
+[node name="title2" type="Label" parent="Zone_7"]
+margin_left = 516.0
+margin_top = 21.0
+margin_right = 582.0
+margin_bottom = 44.0
+rect_rotation = 90.0
+rect_scale = Vector2( 1.16782, 1.16782 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "--- Zone 7"
+
+[node name="Sprite" type="Sprite" parent="Zone_7"]
+position = Vector2( 152.744, 473.684 )
+scale = Vector2( 0.747555, 0.730462 )
+texture = ExtResource( 32 )
+
+[node name="MapShow" type="Panel" parent="Zone_7"]
+margin_left = 524.422
+margin_top = 17.9746
+margin_right = 561.422
+margin_bottom = 54.9746
+rect_scale = Vector2( 12.4352, 6.49049 )
+custom_styles/panel = SubResource( 18 )
+
+[node name="Zone2" type="Sprite" parent="Zone_7/MapShow"]
+position = Vector2( 18.5767, 19.4131 )
+scale = Vector2( 0.0176103, 0.0401486 )
+texture = ExtResource( 30 )
+
+[node name="Label9" type="Sprite" parent="Zone_7"]
+position = Vector2( 832.422, 52.9746 )
+scale = Vector2( 0.24888, 0.144453 )
+
+[node name="Label10" type="Sprite" parent="Zone_7"]
+position = Vector2( 632.422, 85.9746 )
+scale = Vector2( 0.182954, 0.155276 )
+
+[node name="Label11" type="Sprite" parent="Zone_7"]
+position = Vector2( 764.422, 89.9746 )
+scale = Vector2( 0.219796, 0.139423 )
+
+[node name="Label" type="Label" parent="Zone_7"]
+margin_left = 594.422
+margin_top = 71.9746
+margin_right = 679.422
+margin_bottom = 94.9746
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Holly Cottage"
+
+[node name="Label2" type="Label" parent="Zone_7"]
+margin_left = 717.422
+margin_top = 74.9746
+margin_right = 810.422
+margin_bottom = 97.9746
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Old Salting Point"
+
+[node name="Label3" type="Label" parent="Zone_7"]
+margin_left = 781.422
+margin_top = 38.9746
+margin_right = 884.422
+margin_bottom = 61.9746
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "East Heaven Point"
+
+[node name="gamelevelicon13" type="AnimatedSprite" parent="Zone_7"]
+position = Vector2( 630.783, 118.199 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 4
+speed_scale = 0.9
+playing = true
+
+[node name="gamelevelicon14" type="AnimatedSprite" parent="Zone_7"]
+position = Vector2( 769.271, 125.6 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 4
+speed_scale = 0.9
+playing = true
+
+[node name="gamelevelicon15" type="AnimatedSprite" parent="Zone_7"]
+position = Vector2( 832.405, 99.1666 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 3
+speed_scale = 0.9
+playing = true
+
+[node name="Panel5" type="Panel" parent="Zone_7"]
+margin_left = 526.0
+margin_top = 285.0
+margin_right = 566.0
+margin_bottom = 308.0
+rect_scale = Vector2( 11.5196, 15.9968 )
+custom_styles/panel = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Zone_7/Panel5"]
+position = Vector2( 19.8626, 11.4769 )
+scale = Vector2( 0.0341638, 0.0256224 )
+texture = ExtResource( 41 )
+
+[node name="Label12" type="Label" parent="Zone_7"]
+margin_left = 522.385
+margin_top = 259.046
+margin_right = 695.385
+margin_bottom = 282.046
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Scene --- level6 (1-3)"
+
+[node name="Zone_6" type="Node2D" parent="."]
+visible = false
+
+[node name="title2" type="Label" parent="Zone_6"]
+margin_left = 516.0
+margin_top = 21.0
+margin_right = 582.0
+margin_bottom = 44.0
+rect_rotation = 90.0
+rect_scale = Vector2( 1.16782, 1.16782 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "--- Zone 6"
+
+[node name="Sprite" type="Sprite" parent="Zone_6"]
+position = Vector2( 197, 364 )
+scale = Vector2( 0.683643, 0.668012 )
+texture = ExtResource( 28 )
+
+[node name="MapShow" type="Panel" parent="Zone_6"]
+margin_left = 527.0
+margin_top = 32.0
+margin_right = 564.0
+margin_bottom = 72.0
+rect_scale = Vector2( 12.4352, 6.49049 )
+custom_styles/panel = SubResource( 18 )
+
+[node name="Zone2" type="Sprite" parent="Zone_6/MapShow"]
+position = Vector2( 27.3315, 21.1689 )
+scale = Vector2( 0.00766787, 0.0192288 )
+texture = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Zone_6/MapShow"]
+visible = false
+modulate = Color( 0.376471, 0.196078, 0.196078, 1 )
+margin_left = 0.241272
+margin_top = 41.1371
+margin_right = 88.2417
+margin_bottom = 64.1371
+rect_scale = Vector2( 0.0844915, 0.221368 )
+theme = ExtResource( 6 )
+text = "Area Selections"
+
+[node name="Label12" type="Sprite" parent="Zone_6"]
+position = Vector2( 845.794, 89.3963 )
+scale = Vector2( 0.36306, 0.129828 )
+
+[node name="Label" type="Label" parent="Zone_6"]
+margin_left = 771.794
+margin_top = 78.3963
+margin_right = 939.794
+margin_bottom = 101.396
+rect_scale = Vector2( 0.857762, 0.779783 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CHURCH OF ST MARGARET"
+
+[node name="gamelevelicon16" type="AnimatedSprite" parent="Zone_6"]
+position = Vector2( 842.752, 129.104 )
+scale = Vector2( 0.14778, 0.14778 )
+frames = SubResource( 16 )
+frame = 3
+speed_scale = 0.9
+playing = true
+
+[node name="Panel6" type="Panel" parent="Zone_6"]
+margin_left = 531.0
+margin_top = 348.0
+margin_right = 571.0
+margin_bottom = 363.0
+rect_scale = Vector2( 11.5196, 15.9968 )
+custom_styles/panel = SubResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="Zone_6/Panel6"]
+position = Vector2( 19.9368, 7.26196 )
+scale = Vector2( 0.0151945, 0.0130958 )
+texture = ExtResource( 38 )
+
+[node name="Label13" type="Label" parent="Zone_6"]
+margin_left = 530.0
+margin_top = 324.0
+margin_right = 703.0
+margin_bottom = 347.0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Game Scene --- level5 (1)"
+
+[node name="Label2" type="Label" parent="Zone_6"]
+margin_left = 540.0
+margin_top = 40.0
+margin_right = 802.0
+margin_bottom = 141.0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "In the sixth level, there is only one site about
+ the church, which has always existed 
+in this village, and there are 
+many rumors circulating."
+
+[node name="zone4" type="Node2D" parent="."]
+visible = false
+position = Vector2( 186.348, 118.421 )
+scale = Vector2( 0.617582, 0.650649 )
+
+[node name="Panel" type="Panel" parent="zone4"]
+margin_left = 314.0
+margin_top = 221.0
+margin_right = 717.0
+margin_bottom = 421.0
+custom_styles/panel = SubResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="zone4"]
+position = Vector2( 526.458, 324.6 )
+scale = Vector2( 0.382194, 0.382194 )
+texture = ExtResource( 40 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 36 )
+volume_db = -33.0
+autoplay = true
+
+[node name="MainScreenMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 36 )
+volume_db = -35.223
+pitch_scale = 0.64
+autoplay = true
+
+[node name="zone1-pargressbar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 42 )
+
+[node name="ZONE1" type="ProgressBar" parent="zone1-pargressbar"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.792157 )
+anchor_right = 0.364
+margin_left = 326.0
+margin_top = 296.0
+margin_right = 653.44
+margin_bottom = 321.0
+theme = ExtResource( 48 )
+custom_colors/font_color = Color( 0.054902, 0.12549, 0.0901961, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.694118 )
+custom_styles/fg = SubResource( 22 )
+
+[node name="Label" type="Label" parent="zone1-pargressbar/ZONE1"]
+visible = false
+margin_left = 8.00064
+margin_top = 3.22452
+margin_right = 90.0006
+margin_bottom = 26.2245
+rect_scale = Vector2( 0.874816, 0.767194 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.188642, 0.255859, 0.157618, 1 )
+text = "Loading........"
+
+[node name="zone2-progressbar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 43 )
+
+[node name="ZONE2" type="ProgressBar" parent="zone2-progressbar"]
+visible = false
+margin_left = 326.0
+margin_top = 296.0
+margin_right = 668.0
+margin_bottom = 321.0
+theme = ExtResource( 48 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label2" type="Label" parent="zone2-progressbar/ZONE2"]
+visible = false
+margin_left = 8.00064
+margin_top = 3.22452
+margin_right = 90.0006
+margin_bottom = 26.2245
+rect_scale = Vector2( 0.874816, 0.767194 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.188642, 0.255859, 0.157618, 1 )
+text = "Loading........"
+
+[node name="zone3-progressbar" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -707.292
+margin_top = 296.053
+margin_right = -292.292
+margin_bottom = 336.053
+script = ExtResource( 44 )
+
+[node name="ZONE3" type="ProgressBar" parent="zone3-progressbar"]
+visible = false
+margin_left = 8.0
+margin_right = 350.0
+margin_bottom = 25.0
+theme = ExtResource( 48 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Label3" type="Label" parent="zone3-progressbar/ZONE3"]
+visible = false
+margin_left = 8.29266
+margin_top = 3.17151
+margin_right = 90.2927
+margin_bottom = 26.1715
+rect_scale = Vector2( 0.874816, 0.767194 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.188642, 0.255859, 0.157618, 1 )
+text = "Loading........"
+
+[node name="zone4-progressbar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 45 )
+
+[node name="ZONE4" type="ProgressBar" parent="zone4-progressbar"]
+visible = false
+margin_left = 326.0
+margin_top = 296.0
+margin_right = 668.0
+margin_bottom = 321.0
+theme = ExtResource( 48 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label4" type="Label" parent="zone4-progressbar/ZONE4"]
+visible = false
+margin_left = 8.00064
+margin_top = 3.22452
+margin_right = 90.0006
+margin_bottom = 26.2245
+rect_scale = Vector2( 0.874816, 0.767194 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.188642, 0.255859, 0.157618, 1 )
+text = "Loading........"
+
+[node name="zone6-progressbar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 46 )
+
+[node name="ZONE6" type="ProgressBar" parent="zone6-progressbar"]
+visible = false
+margin_left = 326.0
+margin_top = 296.0
+margin_right = 668.0
+margin_bottom = 321.0
+theme = ExtResource( 48 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label5" type="Label" parent="zone6-progressbar/ZONE6"]
+visible = false
+margin_left = 8.00064
+margin_top = 3.22452
+margin_right = 90.0006
+margin_bottom = 26.2245
+rect_scale = Vector2( 0.874816, 0.767194 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.188642, 0.255859, 0.157618, 1 )
+text = "Loading........"
+
+[node name="zone7-progressbar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 47 )
+
+[node name="ZONE7" type="ProgressBar" parent="zone7-progressbar"]
+visible = false
+margin_left = 326.0
+margin_top = 296.0
+margin_right = 668.0
+margin_bottom = 321.0
+theme = ExtResource( 48 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+
+[node name="Label6" type="Label" parent="zone7-progressbar/ZONE7"]
+visible = false
+margin_left = 8.00064
+margin_top = 3.22452
+margin_right = 90.0006
+margin_bottom = 26.2245
+rect_scale = Vector2( 0.874816, 0.767194 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.188642, 0.255859, 0.157618, 1 )
+text = "Loading........"
+
+[connection signal="mouse_entered" from="RealMap2" to="." method="_on_RealMap2_mouse_entered"]
+[connection signal="mouse_exited" from="RealMap2" to="." method="_on_RealMap2_mouse_exited"]
+[connection signal="mouse_entered" from="SiteLocation" to="." method="_on_SiteLocation_mouse_entered"]
+[connection signal="mouse_exited" from="SiteLocation" to="." method="_on_SiteLocation_mouse_exited"]
+[connection signal="mouse_entered" from="Zone1" to="." method="_on_Zone1_mouse_entered"]
+[connection signal="mouse_exited" from="Zone1" to="." method="_on_Zone1_mouse_exited"]
+[connection signal="pressed" from="Zone1" to="." method="_on_Zone1_pressed"]
+[connection signal="pressed" from="Zone1" to="zone1-pargressbar" method="_on_Zone1_pressed"]
+[connection signal="mouse_entered" from="Zone2" to="." method="_on_Zone2_mouse_entered"]
+[connection signal="mouse_exited" from="Zone2" to="." method="_on_Zone2_mouse_exited"]
+[connection signal="pressed" from="Zone2" to="." method="_on_Zone2_pressed"]
+[connection signal="pressed" from="Zone2" to="zone2-progressbar" method="_on_Zone2_pressed"]
+[connection signal="mouse_entered" from="Zone3" to="." method="_on_Zone3_mouse_entered"]
+[connection signal="mouse_exited" from="Zone3" to="." method="_on_Zone3_mouse_exited"]
+[connection signal="pressed" from="Zone3" to="." method="_on_Zone3_pressed"]
+[connection signal="pressed" from="Zone3" to="zone3-progressbar" method="_on_Zone3_pressed"]
+[connection signal="mouse_entered" from="Zone4" to="." method="_on_Zone4_mouse_entered"]
+[connection signal="mouse_exited" from="Zone4" to="." method="_on_Zone4_mouse_exited"]
+[connection signal="pressed" from="Zone4" to="." method="_on_Zone4_pressed"]
+[connection signal="pressed" from="Zone4" to="zone4-progressbar" method="_on_Zone4_pressed"]
+[connection signal="mouse_entered" from="Zone7" to="." method="_on_Zone7_mouse_entered"]
+[connection signal="mouse_exited" from="Zone7" to="." method="_on_Zone7_mouse_exited"]
+[connection signal="pressed" from="Zone7" to="zone7-progressbar" method="_on_Zone7_pressed"]
+[connection signal="mouse_entered" from="Zone6" to="." method="_on_Zone6_mouse_entered"]
+[connection signal="mouse_exited" from="Zone6" to="." method="_on_Zone6_mouse_exited"]
+[connection signal="pressed" from="Zone6" to="zone6-progressbar" method="_on_Zone6_pressed"]
+[connection signal="gui_input" from="Zone_1/GameScenes/Background/ScrollContainer" to="Zone_1/GameScenes/Background/ScrollContainer" method="_on_ScrollContainer_gui_input"]
